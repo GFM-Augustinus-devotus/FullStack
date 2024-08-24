@@ -1,0 +1,3 @@
+As tabelas são elementos do HTML que permitem organizar dados em linhas e colunas. 
+São muito utilizadas por conta da necessidade de mostrar dados de forma organizada para os usuários.
+As principais tags para se criar uma tabela são a <table>, o <tr> e o <td>:Obs.: repare que o <tr> é a tag da linha e o <td> é a tag da coluna.

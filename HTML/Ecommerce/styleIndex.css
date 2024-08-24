@@ -1,0 +1,36 @@
+/*
+Para o menu da sua página web, você pode considerar os seguintes componentes CSS:
+
+Cores: Defina cores de fundo e texto que combinem com o tema do seu site.
+Fontes: Use fontes legíveis e atraentes, talvez até do Google Fonts.
+Borders: Adicione bordas para separar visualmente os itens do menu.
+Hover Effects: Crie efeitos ao passar o mouse, como mudança de cor ou sublinhado.
+Flexbox ou Grid: Utilize para organizar os itens do menu de forma responsiva.
+Padding e Margin: Ajuste o espaçamento para que os itens não fiquem muito apertados.
+Esses componentes vão deixar seu menu mais bonito e funcional! Se precisar de mais detalhes, é só avisar!
+*/
+
+/*Cores: #6354F0 , #C954F0 , #4AB6EF , #A522F0 , #5457F0*/
+/*Fontes: Verdana , Times ,  Montserrat, Script, open sans*/
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+header{
+    background-color: #6354F0;
+    color: #fff;
+}
+
+div{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+main {
+    background-color: #e5e5e5;
+    border-width: 4px;
+    border-color: #1c1a1d;
+    border-style: solid;
+}
