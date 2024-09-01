@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs do HTML</title>
+</head>
+<body>
+    <h1>Inputs do HTML</h1>
+    <form action="">
+        <!-- Campo de texto-->
+        <!--required obriga o usuário a preencher determinado campo-->
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required placeholder="Lord Byron">
+        <br>
+        <br>
+        <!--Campo de email-->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required> <!--Obriga inserir um email-->
+        <br>
+        <br>
+        <!--Campo Senha-->
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required>
+        <br>
+        <br>
+        <!--Campo de seleção Radio (Todos os radios precisam ter o mesmo name para estarem relacionados entre sí)-->
+        <!--Precisa de passar um value para identificar o radio-->
+        <label>Gênero</label><br>
+        <input type="radio" name="genero" id="masculino" value="m">
+        <label for="masculino">masculino</label>
+        <input type="radio" name="genero" id="feminino" value="f">
+        <label for="feminino">feminino</label>
+        <br>
+        <br>
+
+        <!-- Campo se seleção múltipla (Checkbox)-->
+         <label >Interesses:</label><br>
+         <input type="checkbox" id="backend" value="backend" name="Interesses">
+         <label for="backend">Back-end</label>
+         <input type="checkbox" id="frontend" value="frontend" name="Interesses">
+         <label for="frontend">Front-end</label>
+         <input type="checkbox" id="mobile" value="mobile" name="Interesses">
+         <label for="mobile">Mobile</label>
+        <br>
+        <br>
+
+        <!-- Campo de Data-->
+         <!--Envia no formato inglês-->
+        <Label for="dataNascimento">Data de dataNascimento</Label>
+        <input type="date" id="dataNascimento" name="nascimento">
+        <br>
+        <br>
+
+        <!-- Campo de arquivo (Upload)-->
+         <label for="fotoDePerfil">Foto de Perfil:</label>
+        <input type="file" name="avatar" id="fotoDePerfil">
+        <br>
+        <br>
+
+        <!-- Campo de caixa de seleção-->
+        <label for="situacao">Situação Atual</label>
+        <select name="situacao" id="situacao">
+            <option value="" selected disabled >Selecione uma das opções</option> <!-- Mostrador de opções ele é não selecionado -->
+            <option value="estudante">Estudando para ser um programador</option>
+            <option value="estagiario">Estagiário</option>
+            <option value="junior">Júnior</option>
+            <option value="pleno">Pleno</option>
+            <option value="senior">Sênior</option>
+        </select>
+        <br>
+        <br>
+        <label for="sobre">Fale sobre você</label>
+        <textarea name="sobre" id="sobre" cols="40" rows="6" placeholder="Fale um pouco sobre você..."></textarea> <!--não inserir nada dentro da tag-->
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+
+        <!--Como mascarear os dados envidos pelo o usuário na URL-->
+    </form> 
+</body>
+</html> 
