@@ -11,31 +11,66 @@
         <br>
     </div>
     <div>
-        <form action="">
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome" required placeholder="Lord Byron">
-            <br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required placeholder="LB@email.com">
-            <br><br>
-            <label for="whatsapp">Whatsapp:</label><br>
-            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(99)99999-999">
-            <br><br>
-            <label>Área de Atuação</label><br>
-            <input type="radio" id="desenvolvimento" name="area" value="dev">
-            <label for="desenvolvimento">Desenvolvimento</label>
-            <input type="radio" id="QA" name="area" value="qa">
-            <label for="QA">Quality Assurance (QA)</label>
-            <input type="radio" name="area" id="analiseDados" value="ad">
-            <label for="analiseDados">Análise de Dados</label>
-            <input type="radio" name="area" id="Infraestrutura" value="infra">
-            <label for="Infraestrutura">Infraestrutura</label>
-            <br><br>
-            <label for="obs">Observações:</label><br>
-            <textarea name="obs" id="obs" cols="40" rows="5"></textarea><br>
-            <input type="checkbox" name="ofertas" id="ofertas" value="true">
-            <label for="ofertas">Desejo receber novidades e ofertas por email</label><br>
-            <button type="submit">Enviar</button>
+        <form action="#" method="post">
+            <div>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required placeholder="Lord Byron">
+                <br><br>
+            </div>
+                
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required placeholder="LB@email.com">
+                <br><br>
+            </div>
+            
+            <div>
+                <label for="whatsapp">Whatsapp:</label><br>
+                <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(99)99999-999">
+                <br><br>
+            </div>
+           
+            <div>
+                <label>Área de Atuação</label><br>
+                
+                <input type="radio" id="desenvolvimento" name="area" value="dev" required>
+                <label for="desenvolvimento">Desenvolvimento</label>
+
+                <input type="radio" id="QA" name="area" value="qa" required>
+                <label for="QA">Quality Assurance (QA)</label>
+
+                <input type="radio" name="area" id="analiseDados" value="ad" required>
+                <label for="analiseDados">Análise de Dados</label>
+
+                <input type="radio" name="area" id="Infraestrutura" value="infra" required>
+                <label for="Infraestrutura">Infraestrutura</label>
+                <br><br>
+            </div>
+
+            <div>
+                <label for="obs">Observações:</label><br>
+                <textarea name="obs" id="obs" cols="40" rows="5"></textarea><br>
+            </div>
+
+            <div>
+                <input type="checkbox" name="ofertas" id="ofertas" value="true">
+                <label for="ofertas">Desejo receber novidades e ofertas por email</label><br>
+            </div>
+
+            <div>
+                <button type="submit">Enviar</button>
+
+                <p>Search our list of online stores:</p>
+                <input type="search" list="online-stores">
+                <datalist id="online-stores" style="display:hidden;">
+                <option value="Amazon.com">
+                <option value="Zappos">
+                <option value="Buy.com">
+                <option value="Apple Store">
+                <option value="Threadless">
+                </datalist>
+                <!--<input type="submit" value="Enviar"> gera a mesma função do botão type submmit--> 
+            </div>
         </form>
     </div>
 </body>
