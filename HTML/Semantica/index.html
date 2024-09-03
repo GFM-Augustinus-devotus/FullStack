@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!--As metas tags tratam o próprio documento-->
+    <meta charset="UTF-8"> <!--Caracter latinos-->
+    <!--Adaptar a página para diferentes dispositivos-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags Semânticas do HTML 5</title>
+</head>
+<body>
+    <!--Estas tags semânticas informam ao navegador ou quem está acessando as informações da página
+    as diferentes partes da página. Isso melhora a busca da página na pesquisa e melho9ra o entendimento
+    do código em relação a elas
+
+    Buscar uma hierarquia correta de conteúdo
+    -->
+
+    <header> <!--Titulo e cabeçalho-->
+        <h1>Tags Semânticas</h1>
+        <nav>
+            <ul>
+                <li> <a href="#inicio">Início</a></li>
+                <li> <a href="#sobre">Sobre</a></li>
+                <li> <a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main><!--Parte principal da página-->
+        <section id="inicio"> <!--Seções das páginas-->
+            <h2>inicio</h2>
+            <p>Bem-vindo à nossa página</p>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <article> <!--Pequenos conteúdos da section-->
+                <h3>História</h3>
+                <p>Aqui contamos a história da nossa empresa</p>
+            </article>
+            <article>
+                <h3>Missão</h3>
+                <p>Nossa missão é entregar o melhor produto pelo preço justo</p>
+            </article>
+
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <address> <!--Informações de contato-->
+                <p>Entre em contato conosco</p>
+                <p>Endereço: Rua São sebastião, Rio de janeiro, RJ</p>
+                <p>Email:saosebastiao@email.com</p>
+                <p>Telefone: (12) 8888-8888</p>
+            </address> 
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 São Sebastião - Rogai por nós</p>
+    </footer>
+</body>
+</html>
