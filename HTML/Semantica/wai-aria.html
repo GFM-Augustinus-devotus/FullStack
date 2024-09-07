@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAI-ARIA</title>
+</head>
+<body>
+    <body>
+        <!--Atributos de acessibilidade aos usuários com determinada deficiência-->
+        <h1>Atributos de acessibilidade WAI-ARIA</h1>
+        <div role="alert" aria-label="infoHeading" aria-describedby="infoContent">
+            <h2 id="infoHeading"> Informação importante</h2>
+            <p id="infoContent">Esta é uma mensagem informativa para os usuários</p>
+        </div>
+
+        <form action="#" method="post">
+            <!--Acessibilidade para o input informando que ele é obrigatório-->
+            <label for="name">Nome</label>
+            <input type="text" id="name" required aria-required="true" aria-label="Campo de nome">
+        </form>
+
+    </body>
+</body>
+</html>
