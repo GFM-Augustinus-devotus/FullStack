@@ -1,11 +1,11 @@
 body{
-    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fbr%2Ffotos%2Fgoi%25C3%25A2nia&psig=AOvVaw0_YnFg7tHEY4U8czRhkwrh&ust=1736382099147000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIDvp8Tt5IoDFQAAAAAdAAAAABAE");
+    background-image: url("FotoGoiania.jpg");
     background-size: cover;
 }
 
 h1{
     text-align: center;
-    color: #000;
+    color: #ffffff;
     font-size: 50px;
     font-family: Arial, sans-serif;
 }
