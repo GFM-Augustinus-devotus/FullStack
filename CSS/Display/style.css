@@ -1,0 +1,24 @@
+.inline{
+    display: inline;
+    color: royalblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.block{
+    display: block;
+    color: palevioletred ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.inline-block{
+    display: inline-block;
+    color: darkorange;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
