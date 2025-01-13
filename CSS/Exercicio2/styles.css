@@ -1,0 +1,41 @@
+body{
+    padding: 15px;
+}
+
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    align-items: center;
+}
+
+li{
+    width: 30%;
+    height: 260px;
+    margin: 15px;
+    padding: 5px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 3px;
+}
+
+h2 {
+    padding-left: 15px;
+}
+
+p{
+    padding-left: 15px;
+    padding-right: 120px;
+}
+
+.Selected{
+    background-color:#33322f;
+    border: 5px solid #558bb5;
+    box-sizing: border-box;
+}
+
+.Hidden{
+    display: none;
+}
