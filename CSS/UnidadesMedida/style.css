@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* O font-size do root irá mudar o cáculo da proporção do Rem */
+:root{
+    font-size: 16px;
+}
+
+h1{
+    padding: 10px;
+    color: #fff;
+    background-color: #232323;
+}
+
+section{
+    padding: 10px;
+    background-color: #ddd;
+    height: 100px;
+}
+
+.box{
+    display: inline-block;
+    border: 1px solid #232323;
+}
+
+.px{
+    height: 30px;
+}
+
+.rem{
+    height: 3rem;
+}
+
+/* Muito útil em elementos locais como os botões */
+.em{
+    font-size: 2rem;
+    padding: 3em;
+}
+
+.prcnt-33{
+    height: 33.33%;
+}
+
+.prcnt-66{
+    height: 66.66%;
+}
+
+.prcnt-100{
+    height: 100%;
+}
+
+/* O viewport se adapta as os diferentes dispositivos
+ que possuem tekas diferentes */
+
+.vh{
+    height: 50vh;
+}
+
+.vw{
+    width: 50vw;
+}
