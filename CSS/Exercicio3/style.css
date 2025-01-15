@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.Montserrat {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+header{
+    text-align: center;
+    margin: 2rem;
+
+
+}
+h1{
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.SignIn{
+    text-align: center;
+    margin: 2rem;
+}
+
+.SignIn h2{
+    padding: 1rem;
+    font-weight: 500;
+}
+
+.SignIn > p{
+    padding: 1rem;
+    font-weight: 300;
+}
+
+.SignIn > button{
+    color: #fff;
+    background-color: #000;
+    font-size: 1rem;
+    padding: 1em;
+    border: 0;
+    border-radius: 2em;
+    text-transform: uppercase;
+}
+
+.ImageBookShelf{
+    text-align: center;
+    margin: 2rem;
+}
+
+.Catalog{
+    text-align: center;
+    margin: 2rem;
+}
+
+.Catalog h2{
+    padding: 1rem;
+    font-weight: 500;
+}
+
+.Catalog > p{
+    padding: 1rem;
+    font-weight: 300;
+}
+
+.Catalog button{
+    display: inline-block;
+    color: #fff;
+    background-color: #1ea8e9;
+    font-size: 1rem;
+    padding: 1em;
+    border: 0;
+    border-radius: 2em;
+    text-transform: uppercase;
+    margin: 0.6rem;
+}
+
+#Last{
+    background-color: #000;
+}
