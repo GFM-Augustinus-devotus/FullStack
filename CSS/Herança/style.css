@@ -1,0 +1,13 @@
+body{
+    font-family: sans-serif;
+}
+
+.parent{
+    font-size: 3rem;
+    color: red;
+}
+.child{
+        color: blue;
+}
+
+/* child herdou o font-size e o color, porém pode-se estilizar especificamente o elemento filho também. */
