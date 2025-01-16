@@ -1,0 +1,42 @@
+/* Declara as variáveis na raiz  e depois as chama para cada caso*/
+
+:root {
+    --cor-principal: #3c59e7;
+    --cor-claro: #cfc9c9;
+    --cor-escuro: #232323;
+    --preenchimento-pq: .25rem 1rem;
+    --preenchimento-md: 2rem;
+    --preenchimento-gd: 4rem;
+
+    --CorHover: #75f729;
+    --CorHoverTexto: #000;
+}
+
+header {
+    background-color: var(--cor-escuro);
+    color: var(--cor-claro);
+    padding: var(--preenchimento-pq);
+}
+
+section {
+    background-color: var(--cor-claro);
+    padding: var(--preenchimento-md);
+}
+
+/* Caso necessário posso mudar o valor dessa variável dentro de um elemento específico */
+
+div {
+    --preenchimento-pq: 1rem;
+    background-color: var(--cor-principal);
+    color: var(--cor-claro);
+    padding: var(--preenchimento-pq);
+}
+
+.red-box {
+    --cor-principal: #f64348;
+}
+
+p:hover {
+    background-color: var(--CorHover);
+    color: var(--CorHoverTexto);
+}
