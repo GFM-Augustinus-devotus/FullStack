@@ -1,0 +1,39 @@
+/* nth-child */
+li:nth-child(2) {
+    color: #f00;
+}
+
+li:nth-child(3n) {
+    color: #00f;
+}
+
+li:last-child {
+    color: #0f0;
+}
+
+/* Estados dos elementos */
+
+li:hover {
+    background-color: #999;
+}
+
+/* PseudoElementos */
+li::before {
+    content: "(antes) ";
+  }
+  
+  li::after {
+    content: " (depois)";
+  }
+
+  /* not */
+
+  li:not(:first-child) {
+    color: #00ffff;
+}
+
+/* Focus */
+input:focus {
+    background-color: #d6cfcf;
+}
+
