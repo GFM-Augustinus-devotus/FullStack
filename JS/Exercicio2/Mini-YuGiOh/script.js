@@ -1,4 +1,4 @@
-//Classe CardMonster
+//CardMonster Class
 
 CardMonster ={
     name: "",
@@ -10,7 +10,7 @@ CardMonster ={
     situation: "" // Attack or Defence
 }
 
-//Função que instacia a classe
+//Function Inicilize a Object fron CardMonster Class
 
 function createCard(name, type, attack, defence, LifePoints, shield, situation){
     let card = Object.create(CardMonster);
@@ -24,12 +24,12 @@ function createCard(name, type, attack, defence, LifePoints, shield, situation){
     return card;
 }
 
-// Por enquanto eu deixei os valores fixos, mas a ideia é que o usuário possa escolher os valores dos cards
+// For now, Ifixed the values of the cards. But I can create a function to get the values from the user.
 
 let CardAttack = createCard("Blue-Eyes White Dragon", "Dragon", 3000, 2500, 4000, false, "A");
 let CardDefence = createCard("Dark Magician", "Magician", 2500, 2100, 4000, false, "D");
 
-//Função que simula o ataque
+//Function that simulate an attack between two cards.
 
 function attack(card1, card2){
     if(card1.attack > card2.defence && card2.shield == false){
@@ -45,5 +45,5 @@ function attack(card1, card2){
     }
 }
 
-//Mostrar os resultados. Aqui posso tratar a escolha da situação do card.
+//Showing the results
 attack(CardAttack , CardDefence);
