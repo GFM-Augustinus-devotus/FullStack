@@ -4,31 +4,41 @@
 function convertToMeters(value, measure){
     switch(measure){
         case "mm":
-            window.alert("resultado: " + value/1000 + "m");
-            break
+            return  value/1000 + "m";
         case "cm":
-            window.alert("resultado: " + value/100 + "m");
-            break
+            return  value/100 + "m";
         case "dm":
-            window.alert("resultado: " + value/10 + "m");
-            break
+            return  value/10 + "m";
         case "m":
-            window.alert("resultado: " + value + "m");
-            break
+            return  value + "m";
         case "dam":
-            window.alert("resultado: " + value*10 + "m");
-            break
+            return  value*10 + "m";
         case "hm":
-            window.alert("resultado: " + value*100  + "m");
-            break
+            return  value*100 + "m";
         case "km":
-            window.alert("resultado: " + value*1000 + "m");
-            break
+            return  value*1000 + "m";
+        default:
+            return "Unidade não reconhecida";
     }
 }
 
-let value = parseFloat(prompt("Digite o valor: "));
-let measure = prompt("Digite a medida: ");
+/* Receive de value from the Forntentd*/
+/* The Unit is a String for now, i could use a radio box, and set a defeault value*/
+/* The conversion is gonna work only when click on the button*/
+/* The Return of the result is on the alert*/
 
-convertToMeters(value, measure);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const input = document.getElementById("value");
+    const select = document.getElementById("unit");
+    const button = document.getElementById("convertButton");
+    const result = document.getElementById("result");
+
+    button.addEventListener("click", function() {
+        event.preventDefault();
+        const value = parseFloat(input.value);
+        const unit = select.value;
+        result.textContent = convertToMeters(value, unit);
+    });
+});
 
