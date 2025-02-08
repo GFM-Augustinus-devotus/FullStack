@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./CM.js"></script>
     <title>Centro Médico</title>
 </head>
 <body>
@@ -13,14 +14,16 @@
     <main>
         <section>
             <h2>Escolham uma das opções</h2> 
-            <input type="radio" class="CM">
-            <label for="CM">Visualizar</label>
-            <input type="radio" class="CM">
-            <label for="CM">Consultar</label>
-            <input type="radio" class="CM">
-            <label for="CM">Adicionar</label>
-            <input type="radio" class="CM">
-            <label for="CM">Sair</label>
+            <form action="">
+                <input type="radio" name="fila" id="Visualizar" value="Visualizar">
+                <label for="CM">Visualizar</label>
+                <input type="radio" name="fila" id="Consultar" value="Consultar">
+                <label for="CM">Consultar</label>
+                <input type="radio" name="fila" id="Adicionar" value="Adicionar">
+                <label for="CM">Adicionar</label>
+                <input type="radio" name="fila" id="sair" value="sair">
+                <label for="CM">Sair</label>    
+            </form>
         </section>
     </main>
 </body>
