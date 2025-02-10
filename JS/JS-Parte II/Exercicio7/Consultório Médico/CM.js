@@ -9,7 +9,7 @@ function menuCentroMedico(comando) {
         switch (comando) {
             case "Visualizar":
                 window.alert("Pacientes na fila: " + fila);
-                break;
+                break; 
             case "Consultar":
                 if (fila.length === 0){
                     window.alert("A fila já está vazia")
