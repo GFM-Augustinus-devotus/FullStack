@@ -31,7 +31,7 @@ function menuCentroMedico(comando) {
         break; 
     }
 }
-
+// Carrega o elemento HTML em uma variável em JavaScript
 document.addEventListener("DOMContentLoaded", function () {
     let radioButtons = document.querySelectorAll('input[name="fila"]');
 
