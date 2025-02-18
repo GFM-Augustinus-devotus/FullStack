@@ -28,6 +28,14 @@ const Humano = personagens.filter(function(personagens){ //Return only character
 
 console.log(Humano)
 
+// Now I want to Filter by the classe of the character
+
+const guerreiros = personagens.filter(function(personagens){
+    return personagens.classe === "Guerreiro"
+})
+
+console.log(guerreiros)
+
 //Reduce: Take a part of the array and produce a different value: Number, object or even a another array
 
 const nivelTotal = personagens.reduce(function(value , personagem){ // Sum all levels of alll elements of personagens
