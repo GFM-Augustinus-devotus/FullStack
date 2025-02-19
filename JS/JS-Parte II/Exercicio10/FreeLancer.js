@@ -93,8 +93,7 @@ function showListJobOffer(){
                         "Nome: " + job.name + "\n" + 
                         "Descrição: " + job.description + "\n" +
                         "Data:" + job.limitDate  + "\n" + 
-                        "Candidatos: " + candidatesNames(job.index) + "\n\n"
-
+                        "Quantidade de Candidatos: " + candidateCount(job.index) + "\n\n"
         })
         window.alert(jobsList)
         jobsList = ""
@@ -139,6 +138,18 @@ function candidatesNames(index){ // Filter all names of  candidates from a speci
             names += applicant.name + " " 
     }})
     return names
+}
+
+// Count Candidates of job
+
+function candidateCount(index){
+    let total = 0
+    candidate.filter(function(applicant){
+        if(applicant.jobIndex === index){
+            total++
+        }
+    })
+    return total
 }
 
 
