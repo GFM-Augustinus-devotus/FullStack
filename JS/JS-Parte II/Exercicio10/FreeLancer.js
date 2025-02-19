@@ -1,12 +1,13 @@
 let point = 0
 let listJobOffer = []
 let candidate = []
+let jobsList = ""
 
 
 function menuLoad(){
     do{
     point = parseFloat(prompt(
-        "Menu FreeLancer \n\n"+
+        "Menu FreeLancer - Jobs available: "+ listJobOffer.length + " \n\n"+
         "Choose an option: \n"+
         "1. Job Offers\n"+
         "2. Create a job\n"+
@@ -26,7 +27,7 @@ function menuLoad(){
                 break
 
             case 3:
-
+                showJobOfferByIndex(parseFloat(prompt("Insira o índice da vaga de trabarlho")))
                 break
 
             case 4:
@@ -34,7 +35,7 @@ function menuLoad(){
                 break
 
             case 5:
-
+                excludeJobOffer()
                 break
 
             case 6:
@@ -80,21 +81,36 @@ function indexOfTheJob(){
 function addlistJobOffer(){
     let name = prompt("Name of the job:")
     let description = prompt("Description of the job:")
-    let limitDate = new Date(prompt("Limit date to apply to the job:")).toLocaleDateString('en-US', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-      })
+    let limitDate = new Date(prompt("Limit date to apply to the job:"))
     let index = indexOfTheJob()
-    listJobOffer.push(createJob(name, description, limitDate , index , candidate , candidate.length))
+    listJobOffer.push(createJob( index, name, description, limitDate , candidate , candidate.length))
 }
 
-// //Show the jobs
+// //Show all the jobs
 
 function showListJobOffer(){
-    listJobOffer.map(function(job){
-        window.alert( "Emprego: "+ job.index + "\n\n"+"Nome: " + job.name + "\n" + "Descrição: " + job.description + "\n" + "Data Limite:" + job.limitDate)
-    })
+    if(listJobOffer.length === 0){
+        alert("A lista de vagas está vazia!")
+    }else{
+        listJobOffer.map(function(job){
+            jobsList += "Emprego: "+ job.index + "\n\n" + "Nome: " + job.name + "\n" + "Descrição: " + job.description + "\n" + "Data Limite:" + job.limitDate + "\n\n"
+        })
+        window.alert(jobsList)
+        jobsList = ""
+    }
+}
+
+// Show a job by its index
+
+function showJobOfferByIndex(index){
+    listJobOffer.filter(function(job){
+        if(job.index === index){
+            jobsList += "Emprego: "+ job.index + "\n\n" + "Nome: " + job.name + "\n" + "Descrição: " + job.description + "\n" + "Data Limite:" + job.limitDate + "\n\n"
+        }else{
+            alert("Não existe vaga com índice igual a: " +  index)
+        }})
+    alert(jobsList)
+    jobsList = ""
 }
 
 //A candidate aplly for the job
@@ -104,7 +120,17 @@ function registerCandidate(){
 }
 
 
+//Exclude a job
 
+function excludeJobOffer(){ // -1 ---> INDEX === JobOffer Number
+    let index = parseFloat(prompt("Indique o índice da vaga a ser excluída: "))
+    showJobOfferByIndex(index)
+
+    if (index <= listJobOffer.length && window.confirm("Deseja excluir a vaga?")) {
+        listJobOffer.splice(index -1 , 1)
+        alert("Vaga Excluída com sucesso!")
+    } 
+}
 
 /*------------Loading de System--------------------*/
 
