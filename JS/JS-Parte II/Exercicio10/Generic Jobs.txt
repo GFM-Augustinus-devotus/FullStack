@@ -1,0 +1,13 @@
+1) First Job
+
+FullStack Programmer
+HTML , CSS , JS and NodeJs
+18/03/2025
+
+2) Second job
+
+Mobile Senior
+React Native, MongoDB
+20/06/2025
+
+
