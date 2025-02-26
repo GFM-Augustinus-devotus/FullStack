@@ -6,31 +6,34 @@
 }
 
 body{
-    background-color: #1e1e1e;
+    background-color: #232323;
     margin: 1rem;
-    padding: 0.5rem;
+    padding: 1rem 2rem;
 }
 
 h1{
     color: #fff;
+    margin: 1rem;
+    padding: 1rem 0.2rem;    
 }
 
-.galery{
+.galery{ /*Display Flex coloca todas as imagens na mesma linha*/
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*Quebra em linhas para evitar a rolagem horizontal*/
+    gap: 0.125rem; /*Leve espaçamento entre as imagens*/
     justify-content: center;
     align-content: center;
     align-items: center;
 }
 
-.galery img{
+.galery > img{
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 5rem;
+    flex-basis: 10rem;
 
-    min-height: 10rem;
-    min-width: 10rem;
-
-    max-height: 10rem;
-    max-width: 10rem;
+    height: 10rem; /*Fixar o tamanho da imagem*/
+    width: 10rem;
+    
+    aspect-ratio: 1 / 1; /*Proporção de altura e largura*/
+    object-fit: cover; /*Corrigir as distorções de tamanho da imagem*/
 }
