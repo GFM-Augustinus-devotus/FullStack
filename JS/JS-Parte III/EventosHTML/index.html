@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index.js"></script>
+    <title>Eventos do HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Eventos do HTML</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Eventos mais comuns. Caso seja necessário ver a documentação</h2>
+            
+            <label for="onmouseenter">Mouse Enter</label>
+            <input type="text" id="onmouseenter" onmouseenter="onMouseEnter()"> <!--A função é passada para dentro do evento-->
+            
+            <label for="onChange">Change</label>
+            <input type="text" id="onChange" onchange="onChange()">
+
+            <label for="onFoucus">Foco no elemento</label>
+            <input type="text" id="onFoucus" onfocus="onFoucus()">
+
+            <label for="onblur">Saída de foco</label>
+            <input type="text" id="onBlur" onblur="onBlur()">
+
+            <button for="onClick" id="onClick" onclick="onClick()">Confirmar</button>
+
+        </section>
+
+    </main>
+</body>
+</html>
