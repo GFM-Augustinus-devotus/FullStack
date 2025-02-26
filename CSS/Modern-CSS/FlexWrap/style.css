@@ -1,0 +1,46 @@
+body {
+    background-color: #2c2c2d;
+    color: #fff;
+    font-family: sans-serif;
+  }
+  
+  .flex-container { /*Configurou o container como flex para poder manipular suas propriedades*/
+    display: flex;
+    flex-wrap: wrap; /*Ativar o warps*/
+
+    align-items: center; /*Alinhar o itens na linha*/
+    align-content: center; /*Alinhar todos os elementos do conteiner*/
+  }
+  
+  .flex-item {  /* Forma como os elementos crescem ou incolhem com a mudan;a da p[agina web*/
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 15rem;
+  }
+  
+  .box.yellow { /* A caixa amarela não está seguindo o comportamento das demais caixas*/
+    flex: 0 1;
+  }
+  
+  /* Estilos auxiliares */
+  
+  .box {
+    background-color: #4547c7;
+    border: 2px solid #272727;
+    min-height: 10rem;
+    min-width: 10rem;
+  }
+  
+  .box.red {
+    background-color: #ff665c;
+  }
+  
+  .box.yellow {
+    background-color: #f9ff58;
+    height: 20rem;
+  }
+  
+  .box.blue {
+    background-color: #5255eb;
+    height: 20rem;
+  }
