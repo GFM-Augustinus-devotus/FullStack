@@ -17,7 +17,7 @@ body {
     gap: 1rem;
   }
   
-  .item {
+  .item { /** Neste caso o calsse é comum para todos o elementos ***/
     background-color: #4c5caf;
     padding: 1rem;
   }
@@ -39,8 +39,9 @@ body {
     grid-row: 2;
   }
   
+  
   .item4 {
-    grid-column: 3;
+    grid-column: 2 /4;
     grid-row: 3;
   }
   
