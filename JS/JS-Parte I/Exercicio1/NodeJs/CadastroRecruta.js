@@ -8,3 +8,4 @@ let DataDeNascimento = ""
 console.log("Bem-vindo ao sistema de cadastro de recrutas!")
 Nome = window.prompt("Digite seu nome: ")
 console.log(`Nome: ${Nome}`)
+
