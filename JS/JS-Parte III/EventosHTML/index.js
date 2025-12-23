@@ -17,3 +17,7 @@ function onBlur(){
 function onClick(){
     console.log("O botão confirmar foi clicado")
 }
+
+function onInput(){
+    console.log("Input ativado")
+}

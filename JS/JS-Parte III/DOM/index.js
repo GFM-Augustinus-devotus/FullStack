@@ -21,4 +21,11 @@ function show(){
 
     const allContacts = document.querySelectorAll('.contact-input')
     console.log(allContacts)
+
+    document.getElementById('btn').addEventListener('click', () => {
+
+        const inputs = document.querySelectorAll('.contact-input'); 
+        const values = Array.from(inputs, input => input.value);    
+        console.log(values);
+  });
 }
