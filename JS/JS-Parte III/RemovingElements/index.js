@@ -7,6 +7,8 @@ function addContact(){
     const nameLi = document.createElement('li')
     const nameInput = document.createElement('input')
     const space = document.createElement('br')
+    const phoneli = document.createElement('li')
+    const phoneInput = document.createElement('input')
     
     //Creating Contacts Names
     h3.innerText = 'contacts'
@@ -19,11 +21,11 @@ function addContact(){
     ul.appendChild(space)
 
     //Creatting Contacts Phones
-    const phoneli = document.createElement('li')
-    const phoneInput = document.createElement('input')
+
     phoneli.innerText = 'phone: '
     phoneInput.type = 'text'
     phoneInput.name = 'phone'
+    
     phoneli.appendChild(phoneInput)
     ul.appendChild(phoneli) 
     ul.appendChild(space)
