@@ -1,11 +1,12 @@
 //Creatin new elements
 
 function addContact(){
-    const contactSection = document.getElementById('contacts-list')
-    const h3 = document.createElement('h3')
-    const ul = document.createElement('ul')
+    const contactSection = document.getElementById('contacts-list') // Pega o nó do HTML onde vai ser inserido os demais elementos
+    const h3 = document.createElement('h3')                                                             
+    const ul = document.createElement('ul')             /* Criação dos novos elementos a serem inseridos */ 
     const nameLi = document.createElement('li')
     const nameInput = document.createElement('input')
+    const space = document.createElement('br')
     
     //Creating Contacts Names
     h3.innerText = 'contacts'
@@ -15,7 +16,7 @@ function addContact(){
 
     nameLi.appendChild(nameInput)
     ul.appendChild(nameLi)
-    ul.appendChild(document.createElement('br'))
+    ul.appendChild(space)
 
     //Creatting Contacts Phones
     const phoneli = document.createElement('li')
@@ -25,7 +26,7 @@ function addContact(){
     phoneInput.name = 'phone'
     phoneli.appendChild(phoneInput)
     ul.appendChild(phoneli) 
-    ul.appendChild(document.createElement('br'))
+    ul.appendChild(space)
 
     contactSection.append(h3 , ul)
 }
