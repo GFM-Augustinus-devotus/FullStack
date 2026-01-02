@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <title>Formulários com comportamento dinâmico</title>
+</head>
+<body>
+    <h1>Trabalhando com Formulários</h1>
+    <hr>
+    <div>
+        <h2>Montar Pedido</h2>
+        <br>
+        <form action="" id="orderForm">
+             <label for="name">Nome:</label>
+        <br>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="address">Endereço de entrega:</label>
+        <br>
+        <input type="text" name="address" id="address">
+        <br><br>
+        <label for="breadType">Tipo de Pão</label><br>
+        <select name="breadType" id="breadType">
+            <option value="" disabled>Selecione uma opção...</option>
+            <option value="pão francês">Pão Francês</option>
+            <option value="Italiano Branco">Italiano Branco</option>
+            <option value="9 grãos">9 grãos</option>
+            <option value="3 queijos">3 queijos</option>
+            <option value="Integral com orégano">Integral com Orégano</option>
+        </select>
+        <br><br>
+        <div>
+            <label>Principal</label><br>
+            <input type="radio" name="main" id="carne" value="carne">
+            <label for="carne">Carne</label>
+            <input type="radio" name="main" id="frango" value="frango">
+            <label for="frango">Frango</label>
+            <input type="radio" name="main" id="vegano" value="vegano">
+            <label for="vegano">Vegano</label>
+        </div>
+        <br>
+        <div>
+            <label for="salad">Salada:</label><br>
+            <input type="checkbox" id="alface" name="salad" value="alface">
+            <label for="alface">Alface</label>
+            <input type="checkbox" id="tomate" name="salad" value="tomate">
+            <label for="tomate">Tomate</label>
+            <input type="checkbox" id="azeitonas" name="salad" value="azeitonas">
+            <label for="azeitonas">Azeitonas</label>
+            <input type="checkbox" id="cenoura" name="salad" value="cenoura">
+            <label for="cenoura">Cenoura</label>
+            <input type="checkbox" id="picles" name="salad" value="picles">
+            <label for="picles">Picles</label>
+        </div>
+        <br>
+        <label for="observation">Observações:</label>
+        <br>
+        <textarea name="observation" id="observation"></textarea>
+        <br><br>
+        <button type="submit">Fechar Pedido</button>
+    </div>
+        </form>
+</body>
+</html>
