@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./cadastroCarro.js" defer></script>
     <title>Cadastro de carros</title>
-</head>
+</head> 
 <body>
     
     <h1>Cadastro de Carros</h1>
@@ -12,7 +13,10 @@
     <form action="" id="carInsert">
         <label for="driverName">Nome do Motorista</label><br>
         <input type="text" name="driveName" id="driveName" class="mainInputs"><br><br>
-        <button type="button">Add new car</button>
+        <button type="button" id="addCar">Add new car</button>
+        <ul id="stackInputs"></ul>
+        <br>
+        <button type="submit">Concluir</button>
     </form>
 
 </body>
