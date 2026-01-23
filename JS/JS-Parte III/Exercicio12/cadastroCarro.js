@@ -22,7 +22,7 @@ const form = document.getElementById('carInsert')
 const cars = []
 let qtdCars = 0
 
-addCarBtn.addEventListener('click', function(ev){
+addCarBtn.addEventListener('click', function(){
     const stackInputs = document.getElementById('stackInputs')
     const newRow = document.createElement('li')
     const rowIndex = qtdCars
@@ -53,4 +53,32 @@ addCarBtn.addEventListener('click', function(ev){
 
     newRow.append(carNameLabel, carNameInput, modelLabel, modelRadio1, modelLabel1 , modelRadio2 ,modelLabel2, modelRadio3, modelLabel3, removeRowBtn) // A linha é composta por vários elementos
     stackInputs.appendChild(newRow)
+})
+
+const cadastrar = document.getElementById('send')
+
+form.addEventListener('submit', function(ev){
+    ev.preventDefault()
+
+    const fullname = document.getElementById('driverName')
+    const inputRows = document.querySelectorAll('.inputRow')
+
+    let carBrand = []
+    inputRows.forEach(function(row){
+        const brandName = document.querySelector('#'+ row.id + ' input[name="carName"]').value
+        const brandModel = document.querySelector('#'+ row.id + ' input[type="radio"]:checked').value
+        carBrand.push({name: brandName, model: brandModel})
+    })
+
+    const newCar = {fullname: fullname.value, carBrand: carBrand}
+
+    cars.push(newCar)
+    alert('Novo carro foi adicionado')
+
+    fullname.value = ''
+    inputRows.forEach(function(row){
+        row.remove()
+    })
+
+    console.log(cars)
 })
