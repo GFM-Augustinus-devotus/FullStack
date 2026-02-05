@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Olá, mundo!",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Isaac"
+    },
+    {
+      "id": 2,
+      "title": "Requisições POST com Javascript",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Isaac"
+    },
+    {
+      "id": 3,
+      "title": "Fundamentos de Javascript",
+      "author": "Gabriel",
+      "content": "Estudo de REST API com Javascript é fundamental para o aprendizado de sistemas virtuais"
+    },
+    {
+      "id": "9f36",
+      "title": "Json",
+      "author": "Gabriel",
+      "content": "Formatação JSON é fundamental para transporte de informações por meio de requisições"
+    },
+    {
+      "id": "d818",
+      "title": "Fullstack",
+      "author": "Gabriel",
+      "content": "Formação Fullstack deve ser bem revisada"
+    }
+  ]
+}
