@@ -1,16 +1,23 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
 
-// Create a single supabase client for interacting with your database
-const supabase = createClient('https://cem-agendamentos-supabase.5ja4nw.easypanel.host', '')
+// Coloquei as informações do cadastro no Supabase
 
-const schema = document.createElement('p')
+const supabaseURL = import.meta.env.VITE_SUPABASE_URL
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
-schema.textContent = supabase.schema
+const supabase = createClient(supabaseURL, supabaseAnonKey)
 
-document.querySelector('#db-system').append(schema)
-
-function callSchema(){
-    console.log(schema)
+async function getTables() {
+    const { data, error } = await supabase.from('information_schema.tables').select('table_name').eq('table_schema', 'public')
+    if (error) {
+        console.error('Error fetching tables:', error)
+    } else {
+        data.forEach(table => {
+            const p = document.createElement('p')
+            p.textContent = `Schema: public, Table: ${table.table_name}`
+            document.querySelector('#db-system').appendChild(p)
+        })
+    }
 }
 
-callSchema()
+getTables()
