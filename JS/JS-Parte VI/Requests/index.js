@@ -1,14 +1,13 @@
 function createCountryCard(country){
     const card = document.createElement('div')
     const name = document.createElement('h2')
-    const countryName = country.altSpellings[1]
     const flag = document.createElement('img')
     const population = document.createElement('p')
     
     card.classList.add('country')
-    name.textContent = countryName
+    name.textContent = country.altSpellings[1]
     flag.src = country.flags.svg
-    flag.alt = countryName
+    flag.alt = country.altSpellings[1]
     population.textContent = country.population
 
     card.append(name, flag, population)
