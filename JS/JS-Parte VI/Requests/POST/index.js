@@ -1,3 +1,5 @@
+
+
 //Constrói os elementos na parte visual do site
 function renderArticle(articleData){
 
@@ -56,6 +58,47 @@ form.addEventListener('submit', async(ev) =>{
     const savedArticle = await response.json()
     form.reset()
     renderArticle(savedArticle)
-    console.log(savedArticle)
+
 })
+
+const updateButton = document.getElementById('update')
+
+updateButton.addEventListener('click', async(ev) =>{
+    ev.preventDefault()
+
+    const articleUpdate = {
+        title: "Atualização",
+        content: "Testando o PUT Request (update) para o conteúdo de um artigo",
+        author: "Gabriel"
+    }
+
+    const response = await fetch('http://localhost:3000/articles/1',{  // Specify the id in the URL
+        method: 'PUT',  // Use PUT for update
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(articleUpdate)
+    })
+
+    const updatedArticle = await response.json()
+    console.log(updatedArticle)
+})
+
+const deleteButton = document.getElementById('exclude')
+
+deleteButton.addEventListener('click', async(ev) =>{
+    ev.preventDefault()
+
+    const response = await fetch('http://localhost:3000/articles/2', {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    const deleteArticle = await response.json()
+    console.log(deleteArticle)
+
+})
+
+renderArticle(updatedArticle)
 
