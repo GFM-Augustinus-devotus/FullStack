@@ -1,0 +1,12 @@
+Javascript  ---> Seu nome oficial é ECMAScript (Linguagem alto nível e interpretada)
+
+Linguagem Multiparadigma. Aceita dieferentes paradigmas:
+
+    1) Linguagem Estruturada
+    2) Linguagem Orientada a Objetos
+
+Browsers já vem com interpretadores. Mas posso executá-lo fora do navegador com o Node.js.
+
+
+
+** Observação eu vou ter que pesquisar sobre Reactive Native fora do curso da one bitcode
