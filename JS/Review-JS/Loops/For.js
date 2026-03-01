@@ -14,6 +14,7 @@ for(let k = 0; k < nomes.length; k++){
     console.log(`Índice ${k}: ${nomes[k]}`);
 }
 console.log("\n")
+
 // #2 (Mais simples para manipular Arrays)
 
 for(const nome of nomes){
@@ -26,7 +27,7 @@ for(const chave in user){
     console.log(`${chave}: ${user[chave]}`)
 }
 console.log("\n")
-// #4 (Iterar sobre fontes de dados assíncronas, pode ser lista de promessar ou Fluxo de dados (Strems))
+// #4 (Iterar sobre fontes de dados assíncronas, pode ser lista de promessas ou Fluxo de dados (Strems))
 
 async function printOrders(ids) {
     const promises = ids.map(id => Promise.resolve(`Order #${id}`));
