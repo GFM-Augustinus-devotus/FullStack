@@ -1,0 +1,20 @@
+É um modo particular de armazenar e organizar os dados de forma a facilitar sua busca e modificação
+
+Exemplos:
+
+1) Lista Ligada: Coleção ordenada de valores onde cada elemento aponta para o próximo (Possui uma Ordem)
+2) Array: Coleção de elementos que podem ser identificados por meio de um índice
+3) Fila (Queue): First In First Out (FIFO)
+4) Pilha (Stack): Last In First Out (LIFO)
+5) Árvore (Tree): Conjunto de elementos composto por nós que podem ter pais ou Filhos. (Não segue uma ordem)
+
+No JS:
+
+- Listas(Arrays)
+- Dicionários(Objetos) chave e valor
+
+Observação:
+
+- Valor: Algo que você atribui a memória
+- Referência: Criar um Array aponta para uma referência e no caso de atribuir 
+                um array a outro ele mantém a mesma referência.
