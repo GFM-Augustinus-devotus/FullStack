@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fila de espera</title>
+</head>
+<body>
+    <h1>Fila de espera para fazer consulta médicas</h1>
+    <hr>
+    <label for="novoPaciente">Novo paciente</label><br>
+    <input type="text" id="novoPaciente">
+    <button id="AdicionarNovoPacinete" onclick="adicionar()">Adicionar</button><br><br>
+    <button id="ConsultaPaciente">Paciente Consultar</button>
+    <button id="sair" onclick="sair()">Sair</button><br><br>
+    <ul id="pacientes">
+
+    </ul>
+    <script src="filaEspera.js" defer></script>
+</body>
+</html>
