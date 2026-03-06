@@ -29,7 +29,6 @@ console.log(indice)
 
 // Cortar ou concatenar o arry
 
-
 const frutas2 = frutas.slice(2 , 5) // Vai criar uma array de Cópia com os elementos de indice 2,3 e 4
 // 2° parâmetro é opcional
 console.log(frutas2)
@@ -37,3 +36,15 @@ console.log(frutas2)
 const frutas3 =  frutas.slice(-7) // índices negativos inverte a ordem de referência do array
 
 console.log(frutas3)
+
+// Concatenar
+
+const frutas4 = frutas2.concat(frutas3)
+
+console.log(frutas4)
+
+// Substituição de elemnentos ou apagálos
+
+const frutas5 = frutas.splice(3, 1, 'Açaí')
+
+console.log(frutas5)
