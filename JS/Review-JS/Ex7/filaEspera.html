@@ -11,9 +11,14 @@
     <label for="novoPaciente">Novo paciente</label><br>
     <input type="text" id="novoPaciente">
     <button id="AdicionarNovoPacinete" onclick="adicionar()">Adicionar</button><br><br>
-    <button id="ConsultaPaciente">Paciente Consultar</button>
+    <button id="ConsultaPaciente" onclick="consultar()">Paciente Consultar</button>
     <button id="sair" onclick="sair()">Sair</button><br><br>
     <ul id="pacientes">
+
+    </ul>
+    <hr>
+    <h2>Consultando...</h2>
+    <ul id="consultando">
 
     </ul>
     <script src="filaEspera.js" defer></script>
