@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./pilhaCartas.js"></script>
+    <title>Pilha de Cartas</title>
+</head>
+<body>
+    <h1>Selecione uma carta</h1><br>
+    <label for="nomeCarta">Nome da carta</label>
+    <select name="nomeCarta" id="nomeCarta">
+        <option selected disabled>Nome da carta</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="J">J</option>
+        <option value="Q">Q</option>
+        <option value="K">K</option>
+        <option value="A">A</option>
+    </select><br><br>
+    <label for="naipeCarta">Naipe</label>
+    <select name="naipeCarta" id="naipeCarta">
+        <option selected disabled>Naipe de carta</option>
+        <option value="copas">copas</option>
+        <option value="ouros">ouros</option>
+        <option value="espadas">espadas</option>
+        <option value="paus">paus</option>
+    </select><br><br>
+    <button id="adicionarCarta" onclick="adicionar()">Adicionar</button>
+    <button id="sair" onclick="sair">Sair</button>
+    <hr>
+    <h2>Baralho de cartas</h2>
+    <ul id="baralho">
+
+    </ul>
+</body>
+</html>
