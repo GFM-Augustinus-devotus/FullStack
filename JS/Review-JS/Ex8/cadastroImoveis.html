@@ -8,14 +8,29 @@
 <body>
     <h1>Cadastro de Imóveis</h1>
     <hr>
-    <label for="">Quantidade de imóveis</label>
-    <label for="quantidadeImoveis"></label><br><br>
-    <label for="proprietario">Nome do proprietário</label><br>
-    <input type="text" name="proprietario" id="proprietario" class="informacoes"><br><br>
-    <label for="quantidadeQuartos">Quantidade de Quartos</label><br>
-    <input type="number" name="quantidadeQuartos" id="quantidadeQuartos" class="informacoes"><br><br>
-    <label for="quantidadeBanheiro">Quantidade de Banheiros</label><br>
-    <input type="number" name="quantidadeBanheiro" id="quantidadeBanheiro" class="informacoes"><br><br>
-    
+    <div>
+        <label>Quantidade de imóveis: </label>
+        <label id="quantidadeImoveis"></label><br><br>
+        <label for="proprietario">Nome do proprietário</label><br>
+        <input type="text" name="proprietario" id="proprietario" class="informacoes"><br><br>
+        <label for="quantidadeQuartos">Quantidade de Quartos</label><br>
+        <input type="number" name="quantidadeQuartos" id="quantidadeQuartos" class="informacoes" min="0"><br><br>
+        <label for="quantidadeBanheiro">Quantidade de Banheiros</label><br>
+        <input type="number" name="quantidadeBanheiro" id="quantidadeBanheiro" class="informacoes" min="0"><br><br>
+        <div>
+            <label>Possui garagem?</label><br>
+            <input type="radio" name="garagem" value=TRUE id="sim" required>
+            <label for="sim">Sim</label>
+            <input type="radio" name="garagem" value=FALSE id="não" required>
+            <label for="não">Não</label><br><br>
+            <button id="cadastrar" onclick="cadastrar()">Cadastrar</button>
+            <button id="sair" onclick="sair()">Sair</button><br><br>
+        </div>
+    </div>
+
+    <ul id="imoveis">
+        
+    </ul>
+    <script src="cadastroImoveis.js"></script>
 </body>
 </html>
