@@ -1,0 +1,8 @@
+Uma função é uma estrutura que permite declarar um procedimento e executá-lo programaticamente
+
+ENTRADA --> PROCEDIMENTO --> SAÍDA
+
+function nomeDaFunção(entrada ou parâmetros){
+    //Procedimentos
+    return saída
+}
