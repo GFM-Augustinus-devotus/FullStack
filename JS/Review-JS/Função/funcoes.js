@@ -7,3 +7,57 @@ ola //referencia a função como variável mas não a executa
 for(let i = 0 ; i < 5; i++){
     ola() // Aqui está chamando a função
 }
+
+// Parâmetros da função
+
+function dobro(numero = 0){
+    console.log( `O dobro de ${numero} é ${2*numero}`)
+}
+
+dobro(18)
+dobro() // Você não passou o parâmetro então o valor é undefined. undefined * 2 é Not a number mas um erro numérico
+
+//Impedir undefided faz o valor de numero igual a zero
+
+function criarUsuario(nome, email, senha, tipo = "admin"){ //Construtor de objetos
+    const usuario = {
+        nome, //nome: nome
+        email,
+        senha,
+        tipo
+    }
+    console.log(usuario)
+}
+
+function novoUsuario(nome, tipo = "admin", email, senha,){ //Parâmetros com valor padrão devem ser os últimos na lista de parâmetros de uma função
+        const usuario = {
+        nome, //nome: nome
+        email,
+        senha,
+        tipo
+    }
+    console.log(usuario)
+}
+
+criarUsuario("Gabriel", "gabriel@gmail.com", "1234")
+novoUsuario("Gabriel", "gabriel@gmail.com", "1234") // A ordem dos parâmetros importam
+
+function muitosParametros(nome, data, email, senha, tipo, rotulo){
+
+}
+
+function objetoComoParametro(usuario){
+    console.log(usuario)
+}
+
+const dadosUsuario = {
+        nome: "Gabriel",
+        email: "gabriel@rmail.com",
+        senha: "1234",
+        tipo: "Suporte"
+}
+
+
+// Passa um objeto como parâmetro da função
+
+objetoComoParametro(dadosUsuario)
