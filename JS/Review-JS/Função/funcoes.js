@@ -61,3 +61,41 @@ const dadosUsuario = {
 // Passa um objeto como parâmetro da função
 
 objetoComoParametro(dadosUsuario)
+
+//Trabalahndo com o retorno de funções
+
+function calcularMediaAritmetica(num1,num2){
+    return Math.floor((num1 + num2)/2)
+}
+
+let num1 = Math.floor(Math.random() * 100) + 1 // +1 pois começa a contar a partir de zero. Math.floor retorna o valor inteiro
+let num2 = Math.floor(Math.random() * 100) + 1 
+
+// Por padrão função que não tem return, ela devolve um undefined
+
+function criarProduto(nome,preco){
+    const produto = {
+        nome, 
+        preco,
+        estoque: calcularMediaAritmetica(num1,num2) // Funções dentro de funções
+    }
+    
+    return produto
+}
+
+const notebook = criarProduto("Intere core i3 8GB", 2500)
+
+console.log(notebook)
+
+// Retorno de uma função pode ser até outra função
+
+function areaRetangulo(base, altura){
+    return base * altura
+}
+
+function areaQuadrado(lado){
+    return areaRetangulo(lado,lado)
+}
+
+console.log(areaQuadrado(7))
+
