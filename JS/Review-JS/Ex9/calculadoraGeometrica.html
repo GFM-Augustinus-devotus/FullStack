@@ -9,25 +9,28 @@
     <h1>Calculadora Geometrica</h1>
     <hr>
     <h2>Escolha a forma geométrica para calcular a Área</h2><br>
-    <div id="triangulo" onclick="coletarValores(this.name)" name ="triangulo">
+    <div id="triangulo" onclick="coletarValores(this.id)" name ="triangulo">
         <label for="triangulo">Área do triângulo</label><br><br>
     </div>
-    <div id="retangulo" onclick="coletarValores(this.name)" name ="retangulo"> 
+    <div id="retangulo" onclick="coletarValores(this.id)" name ="retangulo"> 
         <label for="retangulo">Área do retângulo</label><br><br>
     </div>
-    <div id="quadrado" onclick="coletarValores(this.name)" name = "quadrado">
+    <div id="quadrado" onclick="coletarValores(this.id)" name = "quadrado">
         <label for="quadrado">Área do quadrado</label><br><br>
     </div>
-    <div id="trapezio" onclick="coletarValores(this.name)" name = "trapezio">
+    <div id="trapezio" onclick="coletarValores(this.id)" name = "trapezio">
         <label for="trapezio">Área do trapézio</label><br><br>
     </div>
-    <div id="circulo" onclick="coletarValores(this.name)" name = circulo>
+    <div id="circulo" onclick="coletarValores(this.id)" name = "circulo">
         <label for="circulo">Área do círculo</label><br><br>
     </div>
     <hr>
     <div id="calculadora">
 
-    </div> 
+    </div>
+    <br>
+    <button onclick="calcularValor()">Calcular</button>
+    <div id="resultado" style="margin-top: 1rem; font-weight: bold;"></div>
 
 <script src="./calculadoraGeometrica.js"></script>
 </body>

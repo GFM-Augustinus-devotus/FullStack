@@ -1,60 +1,193 @@
+let figuraAtual = ''
 
-function areaTriangulo(base,altura){
-    let area = (base*altura)/2
+function setResultado(text) {
+    const out = document.getElementById('resultado')
+    if (out) {
+        out.textContent = text
+    } else {
+        console.log(text)
+    }
+}
+
+function areaTriangulo(base, altura) {
+    let area = (base * altura) / 2
     return area.toFixed(2)
 }
 
-function areaRetangulo(comprimento,largura){
-    let area = (comprimento*largura)
+function areaRetangulo(comprimento, largura) {
+    let area = comprimento * largura
     return area.toFixed(2)
 }
 
-function areaQuadrado(lado){
-    let area = Math.pow(lado,2)
+function areaQuadrado(lado) {
+    let area = Math.pow(lado, 2)
     return area.toFixed(2)
 }
 
-function areaTrapezio(baseMaior,baseMenor,altura){
-    let area = ((baseMaior + baseMenor) * altura)/2
+function areaTrapezio(baseMaior, baseMenor, altura) {
+    let area = ((baseMaior + baseMenor) * altura) / 2
     return area.toFixed(2)
 }
 
-function areaCirculo(raio){
-    let area = (Math.PI * Math.pow(raio,2))
+function areaCirculo(raio) {
+    let area = Math.PI * Math.pow(raio, 2)
     return area.toFixed(2)
 }
 
-//Adaptar a forma de coletar os valores para cada caso
-function coletarValores(figura){
-    console.log(figura)
-    let ul = document.getElementById('calculadora')
-    let medida1Label = document.createElement('label')
-    let medida1 = document.createElement('input')
-    let medida2Label = document.createElement('label')
-    let medida2 = document.createElement('input')
-    let medida3Label = document.createElement('label')
-    let medida3 = document.createElement('input')
-    let calcular = document.createElement('button')
-    
-    medida1Label.innerText = " medida 1 "
-    medida2Label.innerText = " medida 2 "
-    medida3Label.innerText = " medida 3 " 
+function coletarValores(figura) {
+    figuraAtual = figura
+    const ul = document.getElementById('calculadora')
+    const resultado = document.getElementById('resultado')
 
-    medida1.type = Text
-    medida2.type = Text
-    medida3.type = Text
+    if (resultado) {
+        resultado.textContent = ''
+    }
 
-    calcular    .innerText = "calcular"
+    ul.innerHTML = ''
 
-    ul.append(medida1Label, medida1)
-    ul.append(medida2Label,medida2)
-    ul.append(medida3Label,medida3)
-    ul.append(calcular)
+    if (figura === 'triangulo') {
+        const baseLabel = document.createElement('label')
+        const base = document.createElement('input')
+        const alturaLabel = document.createElement('label')
+        const altura = document.createElement('input')
 
-    calcular.onclick(calcular(medida1.value,medida2.value,medida3.value))
-    
+        baseLabel.innerText = 'Base'
+        base.id = 'base'
+        base.type = 'number'
+        base.step = 'any'
+
+        alturaLabel.innerText = 'Altura'
+        altura.id = 'altura'
+        altura.type = 'number'
+        altura.step = 'any'
+
+        ul.append(baseLabel, base)
+        ul.append(alturaLabel, altura)
+        ul.append(document.createElement('br'))
+
+    } else if (figura === 'retangulo') {
+        const comprimentoLabel = document.createElement('label')
+        const comprimento = document.createElement('input')
+        const larguraLabel = document.createElement('label')
+        const largura = document.createElement('input')
+
+        comprimentoLabel.innerText = 'Comprimento'
+        comprimento.id = 'comprimento'
+        comprimento.type = 'number'
+        comprimento.step = 'any'
+
+        larguraLabel.innerText = 'Largura'
+        largura.id = 'largura'
+        largura.type = 'number'
+        largura.step = 'any'
+
+        ul.append(comprimentoLabel, comprimento)
+        ul.append(larguraLabel, largura)
+        ul.append(document.createElement('br'))
+
+    } else if (figura === 'quadrado') {
+        const ladoLabel = document.createElement('label')
+        const lado = document.createElement('input')
+
+        ladoLabel.innerText = 'Lado'
+        lado.id = 'lado'
+        lado.type = 'number'
+        lado.step = 'any'
+
+        ul.append(ladoLabel, lado)
+        ul.append(document.createElement('br'))
+
+    } else if (figura === 'trapezio') {
+        const baseMaiorLabel = document.createElement('label')
+        const baseMaior = document.createElement('input')
+        const baseMenorLabel = document.createElement('label')
+        const baseMenor = document.createElement('input')
+        const alturaLabel = document.createElement('label')
+        const altura = document.createElement('input')
+
+        baseMaiorLabel.innerText = 'Base maior'
+        baseMaior.id = 'baseMaior'
+        baseMaior.type = 'number'
+        baseMaior.step = 'any'
+
+        baseMenorLabel.innerText = 'Base menor'
+        baseMenor.id = 'baseMenor'
+        baseMenor.type = 'number'
+        baseMenor.step = 'any'
+
+        alturaLabel.innerText = 'Altura'
+        altura.id = 'altura'
+        altura.type = 'number'
+        altura.step = 'any'
+
+        ul.append(baseMaiorLabel, baseMaior)
+        ul.append(baseMenorLabel, baseMenor)
+        ul.append(alturaLabel, altura)
+        ul.append(document.createElement('br'))
+
+    } else if (figura === 'circulo') {
+        const raioLabel = document.createElement('label')
+        const raio = document.createElement('input')
+
+        raioLabel.innerText = 'Raio'
+        raio.id = 'raio'
+        raio.type = 'number'
+        raio.step = 'any'
+
+        ul.append(raioLabel, raio)
+        ul.append(document.createElement('br'))
+    }
 }
 
-function calcular(medida1,medida2,medida3){
-    areaTriangulo(medida1,medida2)
+function calcularValor() {
+    if (!figuraAtual) {
+        setResultado('Selecione uma figura para poder calcular')
+        return
+    }
+
+    let area
+
+    if (figuraAtual === 'triangulo') {
+        const base = parseFloat(document.getElementById('base').value)
+        const altura = parseFloat(document.getElementById('altura').value)
+        if (isNaN(base) || isNaN(altura)) {
+            setResultado('Digite valores numéricos válidos')
+            return
+        }
+        area = areaTriangulo(base, altura)
+    } else if (figuraAtual === 'retangulo') {
+        const comprimento = parseFloat(document.getElementById('comprimento').value)
+        const largura = parseFloat(document.getElementById('largura').value)
+        if (isNaN(comprimento) || isNaN(largura)) {
+            setResultado('Digite valores numéricos válidos')
+            return
+        }
+        area = areaRetangulo(comprimento, largura)
+    } else if (figuraAtual === 'trapezio') {
+        const baseMaior = parseFloat(document.getElementById('baseMaior').value)
+        const baseMenor = parseFloat(document.getElementById('baseMenor').value)
+        const altura = parseFloat(document.getElementById('altura').value)
+        if (isNaN(baseMaior) || isNaN(baseMenor) || isNaN(altura)) {
+            setResultado('Digite valores numéricos válidos')
+            return
+        }
+        area = areaTrapezio(baseMaior, baseMenor, altura)
+    } else if (figuraAtual === 'quadrado') {
+        const lado = parseFloat(document.getElementById('lado').value)
+        if (isNaN(lado)) {
+            setResultado('Digite valores numéricos válidos')
+            return
+        }
+        area = areaQuadrado(lado)
+    } else if (figuraAtual === 'circulo') {
+        const raio = parseFloat(document.getElementById('raio').value)
+        if (isNaN(raio)) {
+            setResultado('Digite valores numéricos válidos')
+            return
+        }
+        area = areaCirculo(raio)
+    }
+
+    setResultado(`Valor da área: ${area}`)
 }
+
