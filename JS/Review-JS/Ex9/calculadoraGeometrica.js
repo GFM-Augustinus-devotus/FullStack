@@ -11,7 +11,7 @@ function setResultado(text) {
 
 function areaTriangulo(base, altura) {
     let area = (base * altura) / 2
-    return area.toFixed(2)
+    return area.toFixed(2) 
 }
 
 function areaRetangulo(comprimento, largura) {
@@ -153,16 +153,25 @@ function calcularValor() {
         if (isNaN(base) || isNaN(altura)) {
             setResultado('Digite valores numéricos válidos')
             return
+        }else if(base < 0 || altura < 0){
+            setResultado("Digite apenas medidas positivas")
+            return
+        }else{
+            area = areaTriangulo(base, altura)
         }
-        area = areaTriangulo(base, altura)
+        
     } else if (figuraAtual === 'retangulo') {
         const comprimento = parseFloat(document.getElementById('comprimento').value)
         const largura = parseFloat(document.getElementById('largura').value)
         if (isNaN(comprimento) || isNaN(largura)) {
             setResultado('Digite valores numéricos válidos')
             return
+        }else if(comprimento < 0 || largura < 0){
+            setResultado("Digite apenas medidas positivas")
+            return
+        }else{
+            area = areaRetangulo(comprimento, largura)
         }
-        area = areaRetangulo(comprimento, largura)
     } else if (figuraAtual === 'trapezio') {
         const baseMaior = parseFloat(document.getElementById('baseMaior').value)
         const baseMenor = parseFloat(document.getElementById('baseMenor').value)
@@ -170,24 +179,35 @@ function calcularValor() {
         if (isNaN(baseMaior) || isNaN(baseMenor) || isNaN(altura)) {
             setResultado('Digite valores numéricos válidos')
             return
+        }else if(baseMaior < 0 || baseMenor < 0 ||altura < 0){
+            setResultado("Digite apenas medidas positivas")
+            return
+        }else{
+            area = areaTrapezio(baseMaior, baseMenor ,altura)
         }
-        area = areaTrapezio(baseMaior, baseMenor, altura)
     } else if (figuraAtual === 'quadrado') {
         const lado = parseFloat(document.getElementById('lado').value)
         if (isNaN(lado)) {
             setResultado('Digite valores numéricos válidos')
             return
+        }else if(lado < 0){
+            setResultado("Digite apenas medidas positivas")
+            return
+        }else{
+            area = areaQuadrado(lado)
         }
-        area = areaQuadrado(lado)
     } else if (figuraAtual === 'circulo') {
         const raio = parseFloat(document.getElementById('raio').value)
         if (isNaN(raio)) {
             setResultado('Digite valores numéricos válidos')
             return
+        }else if(raio < 0){
+            setResultado("Digite apenas medidas positivas")
+            return
+        }else{
+            area = areaCirculo(raio)
         }
-        area = areaCirculo(raio)
     }
-
     setResultado(`Valor da área: ${area}`)
 }
 
