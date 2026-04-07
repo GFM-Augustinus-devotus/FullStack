@@ -1,31 +1,43 @@
-let listaCandidatos = [["Gustavo", "Gabriel"], ["Ana", "Daniel", "Deusdeth"]] // Array de array para separar as diferentes listas de candidatos
-let i = 0
-// Dentro da lista de vagas vai a lista de candidatos para saber os nomes dos candidatos de uma vaga de empregos
-let listaVagas = [
-    {indice: 1, nome: "Front-End", descricao:"Desenvolvedor Web Front-End de sites", data: "29/05/2026", qtdCandidatos: listaCandidatos[0].length, candidatos: listaCandidatos[0]},
-    {indice: 2, nome: "Back-End", descricao: "Desenvolvedor Back-End Java e Angular", data: "16/04/2026",qtdCandidatos: listaCandidatos[1].length, candidatos: listaCandidatos[1]}
-]
+const vagas = []
 
-const nomeVagas =  listaVagas.map(function(vaga){
-    return "indice: " + vaga.indice + " nome: " + vaga.nome + " Quantitade Candidatos: " + vaga.qtdCandidatos 
-})
+function listarVagas(){
+    const vagasEmTexto = vagas.reduce(function(textoFinal, vaga, indice){
+        //1. nome, quantidade de candidatos
+        textoFinal += indice + ". "
+        textoFinal += vaga.nome 
+        textoFinal += " (" + vaga.candidatos.length + " candidatos)\n"
+        return textoFinal
+    }, "")
+    window.alert(vagasEmTexto)
+}
 
-const nomesCandidatos = listaVagas.map(function(vaga){
-// Pensar numa forma de retornar apenas os candiadatos das vagas selecionadas
-    return vaga.candidatos
-})
+function novaVaga(){
+    const nome = prompt("Informe um nome para a vaga")
+    const descricao = prompt("Informe a descrição da vaga")
+    const dataLimite = prompt("Informe uma data limite para vaga (dd/mm/yyyy)")
+    const confirmacao = confirm("Dejesa criar uma vaga com essa informações?\n"+
+        "Nome: "+ nome+"\nDescrição: " + descricao + "\nData Limite: " + dataLimite
+    )
+    if(confirmacao){
+        const novaVaga = {nome: nome,descricao: descricao,dataLimite: dataLimite, candidadto: []}
+        vagas.push(novaVaga)
+        alert("Vaga criada com sucesso")
+    }else{
+        alert("Voltando...")
+    }
+}
 
 do {
     i = parseFloat(window.prompt("Escolha uma opção de 1 a 6"))
     switch(i){
         case 1:
-            window.alert(nomeVagas)
+            window.alert("Listar Vagas")
             break
         case 2:
             window.alert("Criar uma nova vaga")
             break
         case 3:
-            window.alert(nomesCandidatos)
+            window.alert("Mostrar Vaga específica")
             break
         case 4:
             window.alert("Inscrever um candidato em uma vaga")
