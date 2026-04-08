@@ -5,7 +5,7 @@ function listarVagas(){
         //1. nome, quantidade de candidatos
         textoFinal += indice + ". "
         textoFinal += vaga.nome 
-        textoFinal += " (" + vaga.candidatos.length + " candidatos)\n"
+        textoFinal += " (" + vaga.candidato.length + " candidatos)\n"
         return textoFinal
     }, "")
     window.alert(vagasEmTexto)
@@ -19,38 +19,95 @@ function novaVaga(){
         "Nome: "+ nome+"\nDescrição: " + descricao + "\nData Limite: " + dataLimite
     )
     if(confirmacao){
-        const novaVaga = {nome: nome,descricao: descricao,dataLimite: dataLimite, candidadto: []}
+        const novaVaga = {nome: nome, descricao: descricao, dataLimite: dataLimite, candidato: []}
         vagas.push(novaVaga)
-        alert("Vaga criada com sucesso")
+        alert("Vaga criada com sucesso!")
     }else{
         alert("Voltando...")
     }
 }
 
-do {
-    i = parseFloat(window.prompt("Escolha uma opção de 1 a 6"))
-    switch(i){
-        case 1:
-            window.alert("Listar Vagas")
-            break
-        case 2:
-            window.alert("Criar uma nova vaga")
-            break
-        case 3:
-            window.alert("Mostrar Vaga específica")
-            break
-        case 4:
-            window.alert("Inscrever um candidato em uma vaga")
-            break
-        case 5:
-            window.alert("Excluir uma vaga")
-            break
-        case 6:
-            window.alert("Saindo...")
-            window.close()
-            break
-        default:
-            window.alert("Escolha uma opção correta")
-    } 
-} while(i !== 6)
+function exibirVaga(){
+    const indice = parseFloat(prompt("Informe o indice da vaga que deseja exibir: "))
+    const vaga = vagas[indice]
+    const candidatosEmTexto = vaga.candidato.reduce(function(textoFinal, candidatoAtual){
+        return textoFinal + "\n - " + candidatoAtual
+    }, "")
+
+    alert("Vaga n° "+ indice +
+        "\nNome: " + vaga.nome +
+        "\nDescrição: " + vaga.descricao +
+        "\nData Limite: " + vaga.dataLimite +
+        "\nQuantidade de candidatos: " + vaga.candidato.length +
+        "\nCandidatos inscritos: " + candidatosEmTexto
+    )
+}
+
+function inscreverCandidato(){
+    const candidato = prompt("Informe o nome do candidato")
+    const indice = parseFloat(prompt("Informe o índice da vaga que o candidato deseja se inscrever"))
+    const vaga = vagas[indice]
+
+    const confirmacao = confirm("Deseja inscrever o candidato " + candidato + "?\n"+
+        "Nome: "+ vaga.nome + "\nDescrição: "+ vaga.descricao + "\nData Limite: " + vaga.dataLimite
+    )
+
+    if (confirmacao){
+        vaga.candidato.push(candidato)
+        alert("Candidato inscrito com sucesso!")
+    }else{
+        alert("Voltando...")
+    }
+}
+
+function excluirVaga(){
+    const indice =  parseFloat(prompt("Informe o índice da vaga que o candidato deseja se inscrever"))
+    const vaga = vagas[indice]
+    const confirmacao = confirm("Tem certeza que deseja excluir a vaga " + indice + " ?\n" + 
+        "Nome: "+ vaga.nome + "\nDescrição: "+ vaga.descricao + "\nData Limite: " + vaga.dataLimite
+    )
+    if(confirmacao){
+        vagas.splice(indice, 1)
+        alert("Vaga excluída com sucesso!")
+    }
+}
+function executar(){
+    let i = 0
+    do {
+        i = parseFloat(window.prompt("Sistema de vagas de emprego"+
+            "\n\nEscolha uma das opções abaixo:"+
+            "\n1. Listar vagas"+
+            "\n2. Criar nova vaga"+
+            "\n3. Mostrar vaga específica"+
+            "\n4. Inscrever um candidato em uma vaga"+
+            "\n5. Excluir uma vaga"+
+            "\n6. Sair do programa"
+        ))
+        switch(i){
+            case 1:
+                listarVagas()
+                break
+            case 2:
+                novaVaga()
+                break
+            case 3:
+                exibirVaga()
+                break
+            case 4:
+                inscreverCandidato()
+                break
+            case 5:
+                excluirVaga()
+                break
+            case 6:
+                window.alert("Saindo...")
+                window.close()
+                break
+            default:
+                window.alert("Escolha uma opção correta")
+        } 
+    } while(i !== 6)
+}
+executar()
+
 
