@@ -11,7 +11,7 @@ function dividir(num){
     }
 }
 
-//dividir(64)
+dividir(64)
 
 function dobrar(num){
     console.log(num)
@@ -21,13 +21,11 @@ function dobrar(num){
     dobrar(num*2)
 }
 
-//dobrar(1)
+dobrar(1)
 
 function fatorial(num){
     console.log(num)
-    if(num === 0){  // Caso base para funções recursivas
-        return 1
-    } else if(num === 1){
+    if(num === 0 || num === 1){  // Caso base para funções recursivas
         return 1
     }else{
         return num * fatorial(num-1) // Volta a pilha de chamadas com o resultado do fatorial

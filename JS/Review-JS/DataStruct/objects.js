@@ -21,6 +21,7 @@ let aluno = {
 
 console.log(user.nome)
 console.log(aluno["Olá mundo"])
+console.log(aluno.prop)
 
 //----- Referenciando funções e propriedades dentro de objetos. Base do POO
 
