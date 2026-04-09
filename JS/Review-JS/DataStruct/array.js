@@ -48,3 +48,4 @@ console.log(frutas4)
 const frutas5 = frutas.splice(3, 1, 'Açaí')
 
 console.log(frutas5)
+console.log(frutas)
