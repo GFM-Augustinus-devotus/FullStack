@@ -16,8 +16,12 @@ function addInput(){
     const newInput2 = document.createElement('br') // Coloquei espaço entre os li's
     newInput2.name = 'br'
 
+    const newHr = document.createElement('hr')
+    newHr.name = 'hd'
+
     //Using the nodes to add a new element
     newLi.appendChild(newInput)
     ul.appendChild(newLi)
     ul.appendChild(newInput2)
+    ul.appendChild(newHr)
 }
