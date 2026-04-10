@@ -7,7 +7,6 @@ function addInput(){
     const newLi = document.createElement('li')
     newLi.className = 'list-item'
     newLi.innerText = 'novo input: '
-    newLi.innerHTML = '<span> Item 1 </span>' // Propriedade perigosa, injetar scripts
 
     const newInput = document.createElement('input')
     newInput.type = 'text'
