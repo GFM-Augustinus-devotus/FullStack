@@ -18,7 +18,7 @@ function addContact(){
 
     nameLi.appendChild(nameInput)
     ul.appendChild(nameLi)
-    ul.appendChild(space)
+    //ul.appendChild(space)
 
     //Creatting Contacts Phones
 
@@ -28,8 +28,19 @@ function addContact(){
     
     phoneli.appendChild(phoneInput)
     ul.appendChild(phoneli) 
-    ul.appendChild(space)
+    //ul.appendChild(space)
 
+    //Adicionando um endereço ao sitema de agenda de contatos.
+    const addressLi =  document.createElement('li')
+    addressLi.innerHTML = '<label for="adress">Endereço: </label>'
+    const addressInput = document.createElement('input')
+    addressInput.type = "text"
+    addressInput.name = "adress"
+    addressInput.id = "adress"
+
+    addressLi.appendChild(addressInput)
+    ul.appendChild(addressLi)
+    
     contactSection.append(h3 , ul)
 }
 
