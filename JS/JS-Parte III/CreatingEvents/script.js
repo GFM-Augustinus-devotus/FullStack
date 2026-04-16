@@ -1,4 +1,4 @@
-function register(ev){
+function register(ev){ //ev é o evento que foi disparado
     console.log(ev)
     const selectionElement = ev.currentTarget.parentNode // pega o elemento pai do elemento que sofreu o evento
     const userName = selectionElement.children.username.value
