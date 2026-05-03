@@ -18,7 +18,11 @@ document.getElementById('placeholder').addEventListener('click', function(){
 })
 
 document.getElementById('disabled').addEventListener('click', function(){
-    input.setAttribute('disabled', !input.disabled)
+    if(input.disabled == false){
+        input.disabled = true
+    }else{
+        input.disabled = false
+    }
 })
 
 //Atributos data : (Armazenar valores customisáveis pelo HTML). Você os chame por meio do atributo dataset
