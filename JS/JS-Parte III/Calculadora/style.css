@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-:root{ /*Variáveis de estilização. Além estou apenas rem como referência de estilização*/
+:root{ /*Variáveis de estilização. Além disso estou apenas 'rem' como unidade de medida de estilização*/
     --bg-color: #212529;
     --border-color: #666;
     --font-color: #f1f5f9;
@@ -41,7 +41,7 @@ header{
     color: var(--bg-color);
 }
 
-button{ /*Apenas os botões internos da calcularo. Os demais botões não são afetados devido a hierarquia do CSS*/
+button{ /*Apenas os botões internos da calculadora. Os demais botões não são afetados devido a hierarquia do CSS*/
     background-color: var(--primary-color);
     border: none;
     border-radius: 0.25rem;
