@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <main data-theme="light" id="game">
+        <header>
+            <h1>Tic Tac Toe</h1>
+        </header>
+        <section id="config-players">
+            <div class="players" id="player1">
+                <label for="player1">Player 1</label>
+                <input type="text" name="player1" id="name1" class="playersName">
+            </div>
+            <div class="players" id="player2">
+                <label for="player2">Player 2</label>
+                <input type="text" name="player2" id="name2" class="playersName">
+            </div>
+        </section>
+        <section id="button-player">
+            <button type="button" class="setting-button" id="start">Start</button>
+            <button type="button" class="setting-button" id="restart">Restart</button>
+        </section>
+        <section id="board-battle">
+            <label id="players">Player 1 x Player2</label>
+            <div id="board">
+                <button type="button" class="game-button"></button>
+                <button type="button" class="game-button"></button>
+                <button type="button" class="game-button"></button>
+                <button type="button" class="game-button"></button>
+                <button type="button" class="game-button"></button>
+                <button type="button" class="game-button"></button>
+                <button type="button" class="game-button"></button>
+                <button type="button" class="game-button"></button>
+                <button type="button" class="game-button"></button>
+            </div>
+        </section>
+        <footer>
+            <label id="result">VENCEDOR: player1</label>
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+:root{
+    --bg-color: #edf1f7;
+    --font-color: #0f192f;
+    --border-color: #666;
+    --player1-color: #2897e7;
+    --player2-color: #d02516;
+    --winner-color: #19ca33;
+    --draw-color: #9588a7;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: sans-serif;
+}
+
+main{
+    max-width: 70%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: block;
+}
+
+header{
+    text-align: center;
+    margin: 1rem;
+    padding: 0.4rem;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight:700;
+}
+
+section{
+    text-align: center;
+    margin: 2rem;
+}
+
+footer{
+    text-align: center;
+}
+
+#config-players{
+    margin: 2rem;
+    display: flex;
+}
+
+.players{
+    display: inline;
+}
+
+label{ 
+    text-align: center;
+    display: block
+}
+
+#button-player{
+    margin: 2rem;
+}
+
+#board-battle{
+    padding: 1.5rem;
+}
+
+#board{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.3rem;
+    margin: 2rem 0;
+    padding-right: 10rem;
+    padding-left: 10rem;
+}
+
+.game-button{
+    font-size: 2.2rem;
+    cursor: pointer;
+    padding: 1rem;
+}
