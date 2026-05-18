@@ -11,6 +11,12 @@ body {
   font-family: sans-serif;
 }
 
+main{
+  max-width: 50%;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+
 #gameBoard {
   background-color: var(--font-color);
   display: grid;
@@ -22,6 +28,7 @@ body {
 }
 
 #gameBoard span {
+  cursor: pointer;
   background-color: var(--bg-color);
   display: grid;
   place-content: center;
@@ -30,8 +37,4 @@ body {
 
 #gameBoard span.win {
   background-color: var(--winner-color);
-}
-
-.cursor-pointer {
-  cursor: pointer;
 }
