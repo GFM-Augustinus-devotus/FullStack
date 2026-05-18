@@ -1,48 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>Tic-Tac-Toe</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <main data-theme="light" id="game">
-        <header>
-            <h1>Tic Tac Toe</h1>
-        </header>
-        <section id="config-players">
-            <div class="players" id="player1">
-                <label for="player1">Player 1</label>
-                <input type="text" name="player1" id="name1" class="playersName">
-            </div>
-            <div class="players" id="player2">
-                <label for="player2">Player 2</label>
-                <input type="text" name="player2" id="name2" class="playersName">
-            </div>
-        </section>
-        <section id="button-player">
-            <button type="button" class="setting-button" id="start">Start</button>
-            <button type="button" class="setting-button" id="restart">Restart</button>
-        </section>
-        <section id="board-battle">
-            <label id="players"></label>
-            <div id="board">
-                <button type="button" class="game-button" disabled></button>
-                <button type="button" class="game-button" disabled></button>
-                <button type="button" class="game-button" disabled></button>
-                <button type="button" class="game-button" disabled></button>
-                <button type="button" class="game-button" disabled></button>
-                <button type="button" class="game-button" disabled></button>
-                <button type="button" class="game-button" disabled></button>
-                <button type="button" class="game-button" disabled></button>
-                <button type="button" class="game-button" disabled></button>
-            </div>
-        </section>
-        <footer>
-            <label id="result"></label>
-        </footer>
-    </main>
+  <h1>Jogo da Velha</h1>
+  <hr>
+  <label for="player1">X</label>
+  <input type="text" id="player1" placeholder="Nome do Jogador 1">
+  <label for="player2">O</label>
+  <input type="text" id="player2" placeholder="Nome do Jogador 2">
+  <button id="start">Começar!</button>
+  <h2>Vez de: <span id="turnPlayer"></span></h2>
+  <section id="gameBoard">
+    <span class="cursor-pointer" data-region="0.0"></span>
+    <span class="cursor-pointer" data-region="0.1"></span>
+    <span class="cursor-pointer" data-region="0.2"></span>
+    <span class="cursor-pointer" data-region="1.0"></span>
+    <span class="cursor-pointer" data-region="1.1"></span>
+    <span class="cursor-pointer" data-region="1.2"></span>
+    <span class="cursor-pointer" data-region="2.0"></span>
+    <span class="cursor-pointer" data-region="2.1"></span>
+    <span class="cursor-pointer" data-region="2.2"></span>
+  </section>
 </body>
 </html>
