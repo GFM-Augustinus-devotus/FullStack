@@ -14,7 +14,7 @@ function updateTitle(){
 function inicializeGame(){
     virtualBoard = [['', '' , ''], ['' ,'' , ''], ['' , '', '']]
     turnPlayer = "player1"
-    document.getElementById('turnPlayer').innerText = ''
+    document.querySelector('h2').innerHTML = 'Vez de: <span id="turnPlayer"></span>'
     updateTitle()
     boardRegion.forEach(function(reg){
         reg.innerText = ''
@@ -36,15 +36,44 @@ function turnChange(turnPlayer){
     }
 }
 
-function verifyWinner(element, row, column){
-    virtualBoard.forEach(function(rowBoard){
-        if(JSON.stringify(rowBoard) === JSON.stringify(['X', 'X', 'X'])){
-            console.log("Player 1 Ganhou")
-            boardRegion.forEach(function(reg){
-                reg.classList.add('win') // Pintar apenas uma linha
-            })
-        }
+function verifyWinner(){ // Irá retornar o array das regiões que configuram uma vitória. Vertical,Horizonsta,Diagonal
+    const regions = []
+    if(virtualBoard[0][0] && virtualBoard[0][0] === virtualBoard[0][1] && virtualBoard[0][0] === virtualBoard[0][2]){
+        regions.push("0.0" , "0.1" , "0.2")
+    } 
+    if(virtualBoard[1][0] && virtualBoard[1][0] === virtualBoard[1][1] && virtualBoard[1][0] === virtualBoard[1][2]){
+        regions.push("1.0" , "1.1" , "1.2") 
+    } 
+    if(virtualBoard[2][0] && virtualBoard[2][0] === virtualBoard[2][1] && virtualBoard[2][0] === virtualBoard[2][2]){
+        regions.push("2.0" , "2.1" , "2.2")
+    } 
+    if(virtualBoard[0][0] && virtualBoard[0][0] === virtualBoard[1][0] && virtualBoard[0][0] === virtualBoard[2][0]){
+        regions.push("0.0" , "1.0" , "2.0")
+    } 
+    if(virtualBoard[0][1] && virtualBoard[0][1] === virtualBoard[1][1] && virtualBoard[0][1] === virtualBoard[2][1]){
+        regions.push("0.1" , "1.1" , "2.1") 
+    } 
+    if(virtualBoard[0][2] && virtualBoard[0][2] === virtualBoard[1][2] && virtualBoard[0][2] === virtualBoard[2][2]){
+        regions.push("0.2" , "1.2" , "2.2")
+    } 
+    if(virtualBoard[0][0] && virtualBoard[0][0] === virtualBoard[1][1] && virtualBoard[0][0] === virtualBoard[2][2]){   
+        regions.push("0.0" , "1.1" , "2.2")
+    } 
+    if(virtualBoard[0][2] && virtualBoard[0][2] === virtualBoard[1][1] && virtualBoard[0][2] === virtualBoard[2][0]){
+        regions.push("0.2" , "1.1" , "2.0")  
+    }    
+    return regions
+}
+
+function handleWinner(winRegion){ /*Recebe o Array Vitorioso */
+    winRegion.forEach(function(reg){
+        document.querySelector('[data-region="'+ reg +'"]').classList.add('win') /*Vai percorrer o array e pintar as regiões para a vitória */
     })
+    boardRegion.forEach(reg => { /*Desabilitar regiões quando o jogo acaba*/
+        disableRegion(reg)
+    })
+    document.querySelector('h2').innerHTML = document.getElementById(turnPlayer).value + ' VENCEU!'
+
 }
 
 function handleBoardClick(ev){
@@ -53,6 +82,7 @@ function handleBoardClick(ev){
     const rowColumnPair = region.split('.')
     const row = rowColumnPair[0]
     const column = rowColumnPair[1]
+
     if (turnPlayer === "player1"){
         span.innerText = "X"
         virtualBoard[row][column] = "X"
@@ -62,12 +92,17 @@ function handleBoardClick(ev){
     }else{
         console.error("Erro no jogo");
     }
-    console.clear()
-    console.table(virtualBoard)
-    console.log(turnPlayer)
+    
     disableRegion(span)
-    verifyWinner(span, row, column)
-    turnPlayer = turnChange(turnPlayer)
+    const winRegion = verifyWinner()
+    if(winRegion.length > 0){
+        handleWinner(winRegion)
+    }else if(virtualBoard.flat().includes('')){
+        turnPlayer = turnChange(turnPlayer)
+        updateTitle()
+    }else{
+        document.querySelector('h2').innerHTML = 'EMPATE!'
+    }
 }
 
 start.addEventListener('click', inicializeGame)
