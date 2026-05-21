@@ -1,0 +1,9 @@
+JavaScript Moderno
+
+Novos Recursos: Template Literls, Desetruturação, Módulos e etc.
+
+Gerenciamento de pacotes com NPM
+
+Compilação de JAVASCRIPT com BABEL
+
+Empacotamento (Bundling)
