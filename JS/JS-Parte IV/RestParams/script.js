@@ -8,4 +8,10 @@ function sum(...numbers){
 
 console.log(sum(1/7 , 2/7, 3/7, 4/7, 5/7, 6/7, 1)) /*Somo todos os valores. Posso colocar quantos parâmetros eu desejar*/
 
-/*Vale lemrar que ...numbers deve vir por último */
+/*Vale lembrar que ...numbers deve vir por último */
+
+/*Exercise*/
+
+const f = (...args) => console.log(args[0], args[args.length - 1])
+
+console.log(f(1 , 2 , 3, 5, 6))
