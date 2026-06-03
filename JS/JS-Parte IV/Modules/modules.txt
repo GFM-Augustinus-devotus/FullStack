@@ -1,0 +1,13 @@
+** Módulos são agrupamentos de Códigos com funcionalidade distintas que podem ser compartilhados, adicionados ou removidos de
+nossos softwares. Posso reaporveitar módulos para diferentes ocasioões
+
+Ex.: Adicionar funcionalidade de carrinho na página. Módulo do carrinho. Módulo de login e autenticação. Tarefas grandes ou específicas
+
+** Por que usar Módulos: Mais fácil de gerenciar e fazer manutenções. Na arquitetura de Software nós temos:
+
+Manutenibilidade: + fácil para dar manutenções
+Namespacing: Agrupamento de Nomes (Módulo person, Módulo user, Módulo product) eles não se misturam
+Reusabilidade: Aproveitar códigos de um módulo em outra aplicação. Ex.: Módulo data ou calendário para diferentes sistemas 
+(DRY - Don´t repeat Yourself)
+
+Hoje Existe o ES Modules. (Nativa da linguagem para trabalhar com módulos)

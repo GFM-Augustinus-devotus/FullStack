@@ -12,6 +12,8 @@ console.log(sum(1/7 , 2/7, 3/7, 4/7, 5/7, 6/7, 1)) /*Somo todos os valores. Poss
 
 /*Exercise*/
 
-const f = (...args) => console.log(args[0], args[args.length - 1])
-
-console.log(f(1 , 2 , 3, 5, 6))
+const f = (...args) => {
+    console.log(args[0], args[args.length - 1])
+    console.log(args)
+}
+f(1,2,3,4,5,6)
