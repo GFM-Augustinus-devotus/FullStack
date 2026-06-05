@@ -1,5 +1,5 @@
 ** Módulos são agrupamentos de Códigos com funcionalidade distintas que podem ser compartilhados, adicionados ou removidos de
-nossos softwares. Posso reaporveitar módulos para diferentes ocasioões
+nossos softwares. Posso reaporveitar módulos para diferentes ocasiões
 
 Ex.: Adicionar funcionalidade de carrinho na página. Módulo do carrinho. Módulo de login e autenticação. Tarefas grandes ou específicas
 
@@ -11,3 +11,12 @@ Reusabilidade: Aproveitar códigos de um módulo em outra aplicação. Ex.: Mód
 (DRY - Don´t repeat Yourself)
 
 Hoje Existe o ES Modules. (Nativa da linguagem para trabalhar com módulos)
+
+/*Diferentes tipos de Export*/
+
+Export nomeado(inline): Posso exportar quantas funções ou variáveis eu desejar.
+Export default(inline): Posso exportar apenas uma função ou variável. Posso chamar a função exportada como eu quiser no arquivo de origem
+Export non-inline: Export separado das funções de forma agrupada no início ou no final do arquivo. Se for Default apenas no final
+Ele serve tanto para funções agrupadas quanto para funções default
+
+Posso fazer export para funções anônimas também
