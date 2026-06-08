@@ -1,4 +1,4 @@
-/*Neste Módulo foi criado as funções principais da calculador que são passadas para os eventos da Claculdora */
+/*Neste Módulo foi criado as funções principais da calculadora que são passadas para os eventos da CalcMain */
 
 import { input, output, copy, root, main, keys} from "./Calc1.js"
 export {calculate, inputSet, clearSet, keySelection, switchTheme, copySelection}
