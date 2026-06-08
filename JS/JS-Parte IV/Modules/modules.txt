@@ -1,7 +1,8 @@
 ** Módulos são agrupamentos de Códigos com funcionalidade distintas que podem ser compartilhados, adicionados ou removidos de
 nossos softwares. Posso reaporveitar módulos para diferentes ocasiões
 
-Ex.: Adicionar funcionalidade de carrinho na página. Módulo do carrinho. Módulo de login e autenticação. Tarefas grandes ou específicas
+Ex.: Adicionar funcionalidade de carrinho na página -> Módulo do carrinho.
+ex.: Cadastro de Usuários ->  Módulo de login e autenticação.
 
 ** Por que usar Módulos: Mais fácil de gerenciar e fazer manutenções. Na arquitetura de Software nós temos:
 
@@ -20,3 +21,16 @@ Export non-inline: Export separado das funções de forma agrupada no início ou
 Ele serve tanto para funções agrupadas quanto para funções default
 
 Posso fazer export para funções anônimas também
+
+/*Divisão de uma aplicação em módulos*/
+
+Vamos supor que minha aplicação precisa ser dividida em 3 Módulos. No caso terá 1 módulo principal e 2 módulos secundários
+que alimentam o módulo principal. Depois disso o módulo principal é carregado na página HTML. Vale lembrar de exportar e importar
+os módulos de maneira correta e lógica de acordo com os seus conteúdos.
+
+# Vale observar que temos funções e eventos relacionados aos elementos do HTML (DOM). Alguns eventos utilizam funções anônimas
+Portanto posso criar módulos para essas funções e colocá-las em outro módulos que possui os eventos dos elementos do HTML.
+
+/*Comunicação dos módulos*/
+
+O VS code facilita a visualizar a comunicação entre os módulos
