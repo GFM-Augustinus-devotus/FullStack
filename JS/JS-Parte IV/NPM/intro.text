@@ -1,0 +1,47 @@
+**NPM: Gerenciador de Pacotes do NodeJS**
+
+Obs.: Um pacote refere-se a 1 ou mais módulos
+
+Com o NPM os programadores podem compartilhar os módulos entre sí. (compartilhar,baixae e gerenciar módulos para o projeto). Tudo isso aliado a
+comunidade de sóftware aberto
+
+1° Usar um Terminal para executar os comandos NPM
+2° Um repositório online de pacotes, onde ficam hospedados os módulos que podemos baixar
+3° O site https://npmjs.com
+
+package.jason --> É arquivo principal do NPM que serve para gerenciar o projeto
+
+*Vamos utilizar o pacote Lodash para fazer testes e estudos com o NPM*
+
+Obs.: Vale lembrar que o arquivo JS que você está manipulando deve estar dentro da mesma pasta que foi instalado o pacote pelo NPM
+
+Pelo NPM eu posso exportar o package diretamente sem ter que passar o caminhop de seu diretório: const lodash =  require("lodash")
+
+/******************************/
+
+Instalar normalmente
+
+npm install --save "..."
+
+Vale lembrar que podemos adicionar pelo NPM dependências que utilizaremos apenas durante o desenvolvimento
+
+npm install --save-dev "..."
+
+Foi utilizado o lodash e o eslinter(Formatador de código, útil durante o desenvolvimento de um software)
+
+/******************************/
+
+Pode-se instalar pacotes a nível global pelo NPM. Podemos executar em qualquer repositório da máquina
+
+Foi utilizado o SASS --> Pré processador de CSS.
+
+/******************************/
+
+REMOVER um pacote e suas dependências
+
+npm uninstall "..."
+
+/******************************/
+
+Atenção para versionamento do seu código pelo Git não mandar um Module de algum pacote instalado para o seu GitHub
+
