@@ -3,7 +3,7 @@
 Obs.: Um pacote refere-se a 1 ou mais módulos
 
 Com o NPM os programadores podem compartilhar os módulos entre sí. (compartilhar,baixae e gerenciar módulos para o projeto). Tudo isso aliado a
-comunidade de sóftware aberto
+comunidade de software aberto
 
 1° Usar um Terminal para executar os comandos NPM
 2° Um repositório online de pacotes, onde ficam hospedados os módulos que podemos baixar
@@ -35,6 +35,7 @@ Pode-se instalar pacotes a nível global pelo NPM. Podemos executar em qualquer 
 
 Foi utilizado o SASS --> Pré processador de CSS.
 
+npm install --global "..."
 /******************************/
 
 REMOVER um pacote e suas dependências

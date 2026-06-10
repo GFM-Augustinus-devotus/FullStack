@@ -1,0 +1,7 @@
+JSON --> JavaScript Object Notation
+
+. É um formato de arquivo utilizado para a troca de dados
+. uSA O fORMATO Chave-valor. (Como valores eu posso passar String, number, boolean, null, objetos e arrays)
+. Amplamente utilizado para trpca de dados entre diferentes sistemas e arquivos de configuração no JS
+
+Converter String para JSON e JSON para string
