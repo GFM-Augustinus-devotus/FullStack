@@ -1,0 +1,15 @@
+** NPX **
+
+NPX é um comando que é usado para executar as bibliotecas instaladas por linha de comando. Todos aqueles packeges instalados
+por meio do NPM podem ter o seu executável executado por meio do NPX
+
+Alguns pacotes tem funcionalidades que podemos chamá-las por meio da linha de comando
+
+** Scripts NPM**
+
+Os scripts do NPM que encontramos no seu packege.json são um atalho para algumas linhas de comnado que usamos no nosso prompt
+e com ele podemos armazenar linhas de comando NPX que vem dos executáveis dos módulos instalados pelo NPM.
+
+Para executar basta usar: npm run "nome do script...."
+
+podemos armazenar vários atalhos no Script para serem utilizados como comandos no futuro pelo prompt
