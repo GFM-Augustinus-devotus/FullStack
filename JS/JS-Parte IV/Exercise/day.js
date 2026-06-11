@@ -21,11 +21,11 @@ function mainDate(data, today) {
         birthday = today;
     }
 
-    const daysForNexBirthday = birthday.diff(today, 'day');
+    let daysForNexBirthday = birthday.diff(today, 'day', true);
 
     console.log(`A idade é: ${age}`);
     console.log(`Seu próximo aniversário é: ${birthday.format('DD/MM/YYYY')}`);
-    console.log(`Faltam ${daysForNexBirthday} dia(s) para o próximo aniversário`);
+    console.log(`Faltam ${(daysForNexBirthday == 0)?365:Math.trunc(daysForNexBirthday + 1)} dia(s) para o próximo aniversário`);
 }
 
 let data;
