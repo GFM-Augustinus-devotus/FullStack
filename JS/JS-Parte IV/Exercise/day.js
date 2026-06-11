@@ -1,40 +1,46 @@
-/*Para exemplificar vou utilizar a data da final da copa do mundo de 2002 (30/06/2002)
+import * as readline from 'node:readline/promises';
+import { stdin as input, stdout as output } from 'node:process';
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat.js';
 
-Devo colocar tudo dento de uma função onde eu passo apenas a data 'yyyy-mm-dd'. Atenção na conversão de Data para string
+dayjs.extend(customParseFormat);
 
-.Descobrir a idade atual
-.Quando será o próximo aniversário
-.Quantos dias faltam para o próximo aniversário
+const rl = readline.createInterface({ input, output });
+const today = dayjs();
 
-*/
-const dayjs = require('dayjs')
-const data = dayjs('2002-06-30')
-const today = dayjs()
+function mainDate(data, today) {
+    const nestBirthday = data.add(today.diff(data, 'year'), 'year');
+    const age = today.diff(data, 'year');
+    let birthday;
 
-function mainDate(data, today){
-
-    var nestBirthday = data.add( today.diff(data, 'year') ,'year')
-    var age = today.diff(data, 'year')
-    var birthday = ''
-    var daysForNexBirthday = 0
-
-    if (today.diff(nestBirthday, 'day') < 0 ) {
-        birthday = nestBirthday
-    }else if(today.diff(nestBirthday, 'day') > 0 ) {
-        birthday = nestBirthday.add(1 , 'year')
-    }else{
-        birthday = today
+    if (today.diff(nestBirthday, 'day') < 0) {
+        birthday = nestBirthday;
+    } else if (today.diff(nestBirthday, 'day') > 0) {
+        birthday = nestBirthday.add(1, 'year');
+    } else {
+        birthday = today;
     }
 
-    daysForNexBirthday = birthday.diff(today, 'day')
+    const daysForNexBirthday = birthday.diff(today, 'day');
 
-    console.log(`A idade é: ${age}`)
-    console.log(`Seu proximo aniversário é: ${birthday.format('DD/MM/YYYY')}`)
-    console.log(`Faltam ${daysForNexBirthday} dia(s) para o próximo aniversário`)
+    console.log(`A idade é: ${age}`);
+    console.log(`Seu próximo aniversário é: ${birthday.format('DD/MM/YYYY')}`);
+    console.log(`Faltam ${daysForNexBirthday} dia(s) para o próximo aniversário`);
 }
 
+let data;
 
+while (true) {
+    const answer = await rl.question('Qual a sua data de nascimento (DD/MM/YYYY)? ');
+    data = dayjs(answer, 'DD/MM/YYYY', true);
 
-mainDate(data, today)
+    if (data.isValid()) {
+        break;
+    }
 
+    console.log('Data inválida. Por favor, digite a data no formato DD/MM/YYYY.');
+}
+
+mainDate(data, today);
+rl.close();
 
