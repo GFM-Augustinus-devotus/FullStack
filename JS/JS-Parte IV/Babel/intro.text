@@ -1,0 +1,33 @@
+** Babel - Compilador Javascript **
+
+Converte o JS moderno para versão mais antiga, para que o código funcione em navegadores mais desatualizados
+
+Recursos do Babel:
+
+. Transformação de sintaxe
+. Polyfill de Recursos não existentes no ambiente do alvo (Preenche o vácuo de recursos)
+    |
+    |--> Exemplo as promisses
+
+. Transformação de código
+
+https://babeljs.io
+
+Obs.: O babel não é uma dependência que utilizamos em produção. No caso devemos instalá-lo apenas para desenvolvimento da aplicação.
+Para isso ao instalar use a Tag --save-dev ou -D
+
+@babel/core --> Núcleo para o funcionamento do Compilador
+@babel/cli --> ferramenta para linha de comando do Babel (Terminal)
+@babel/preset-env --> Ambiente pré setado. No caso existe muitas configurações que colocamos no Babel para configura o ambiente
+
+Resultado: Ao fazer a conversão eu percebi que fez mudanças no meu código fonte como colocar ; no final do código.
+
+Posso gravar essa mudança em um novo arquivo e chamá-lo de dist.js
+
+Obs.: --presets=@babel/preset-env irá setar o arquivo de distribuição com as configurações desejadas
+
+pode executar em uma pasta inteira (src --> pasta que armazena o código fonte)
+
+.. Podemos configurar o Babel em um arquivo de configuração!
+
+** babel.config.js ** ---> Usar o contexto do Node.js para ser executado. Ler a documentação. Configurar os meus diferentes presets

@@ -1,0 +1,3 @@
+"use strict";
+
+console.log("Hello World, I´m using babel to distibute my src correctly");
