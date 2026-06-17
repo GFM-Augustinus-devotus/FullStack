@@ -33,6 +33,8 @@ A instalação do Webpack deve ser apenas durante o desenvolvimento.
 
 Com o Webpapack não anexamos apenas um arquivo JS na página HTML. É mais leve o seu carregamento
 
+Usar o Arquivo de configuração do WebPack
+
 WARNING in configuration
 The 'mode' option has not been set, webpack will fallback to 'production' for this value.
 Set 'mode' option to 'development' or 'production' to enable defaults for each environment.
