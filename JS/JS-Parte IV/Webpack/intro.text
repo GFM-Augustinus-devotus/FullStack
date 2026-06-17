@@ -7,7 +7,7 @@ estáticos contendo tudo que aplicação precissa para funcionar
 
 Arquivos estáticos são mais fáceis para serem compartilhados
 
-IO Webpack constrói um grado de dependências para os pontos de entrada o que permite saber exatamente quais módulos são 
+O Webpack constrói um grafo de dependências para os pontos de entrada o que permite saber exatamente quais módulos são 
 necessários
 
 Usar webpack junto com o Babel
@@ -16,7 +16,7 @@ https://webpack.js.org
 
 ** Peças chave **
 
-. Entry (A entrada onde o Web pack procurará por arquivos para empacotar)
+. Entry (A entrada onde o Webpack procurará por arquivos para empacotar)
 . Output (Saída após empacotamento)
 . Loaders (Entender outros tipos de arquivos)
 . Plugins (Ferramentas para estender o comportamento do Webpack)
@@ -24,4 +24,16 @@ https://webpack.js.org
 ** Por que utilizar? **
 
 Trabalhar com módulos de maneira mais fácil
-Automatizar gerencimento de módulosUma solução muito usada por empresas e fremeworks populares como Next.js, Vue.js estático
+Automatizar gerencimento de módulos. 
+Uma solução muito usada por empresas e fremeworks populares como Next.js, Vue.js estático
+
+** Observação **
+
+A instalação do Webpack deve ser apenas durante o desenvolvimento. 
+
+Com o Webpapack não anexamos apenas um arquivo JS na página HTML. É mais leve o seu carregamento
+
+WARNING in configuration
+The 'mode' option has not been set, webpack will fallback to 'production' for this value.
+Set 'mode' option to 'development' or 'production' to enable defaults for each environment.
+You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
