@@ -39,3 +39,10 @@ WARNING in configuration
 The 'mode' option has not been set, webpack will fallback to 'production' for this value.
 Set 'mode' option to 'development' or 'production' to enable defaults for each environment.
 You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
+
+** Loaders **
+
+. Utilizado um Loader que inclui CSS nos módulos. No caso no Arquivo de configuração do Webpack você deve colocar as rules
+que ele irá seguir
+
+A estilização e a aplicação das funcionalidades na página Web sÓ IRÃO FUNCIONAR depois de empacotar com o Webpack
