@@ -46,3 +46,8 @@ You can also set it to 'none' to disable any default behavior. Learn more: https
 que ele irá seguir
 
 A estilização e a aplicação das funcionalidades na página Web sÓ IRÃO FUNCIONAR depois de empacotar com o Webpack
+
+** Plugin **
+
+. Para exeplificar o uso dos plugins no Webpack vamos utilizar um pluggin para poder gerar um arquivo .css separado
+do arquivo JS e esse também esta´ra dentro da pasta dist
