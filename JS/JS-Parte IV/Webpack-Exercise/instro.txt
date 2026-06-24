@@ -1,0 +1,7 @@
+** Detalhes/Etapas para a organização de um projeto usando o Webpack **
+
+1. Inicializar a pasta em que se encontra o projeto com o NPM
+
+    npm init -y
+
+2. 
