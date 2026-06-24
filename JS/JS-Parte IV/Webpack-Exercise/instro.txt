@@ -4,4 +4,18 @@
 
     npm init -y
 
-2. 
+2. Creiei uma pasta src. Nela eu criei uma pasta styles e coloquei meu arquivo CSS nele. Depois na pasta src eu coloquei meu 
+arquivo JS
+
+3. Instalar o Webpack,  Babel e os loaders pelo Prompt de comando
+
+4. Criar um arquivo de configuração para o Babel e exportá-lo. Neste caso não foi utilizado a configuração de
+linha de comando do babel.
+
+5. Criar um arquivo de configuração do Webpack. Envolve o Entry , Mode , Module => Rules => Loaders , Output.
+
+6. Criei um script no package json para rodar o webpack => build
+
+7. Fiz um build e verifiquei a funcionalidade. Por Enquanto no modo development.
+
+8. Mudei o mode para production e fiz um build final
