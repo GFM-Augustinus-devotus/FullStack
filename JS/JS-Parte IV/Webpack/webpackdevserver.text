@@ -1,0 +1,15 @@
+- Webpackdevserver:
+
+Pacote para usar em conjunto com webpack para criar um servidor de desenvolvimento 
+Para rodar as aplicações quando estamos as desenvolvendo.
+
+Antes de iniciar o servior você deve configurar o arquivo de configurações do Webpack
+
+Atenção: Ele se utiliza da pasta "public" 
+
+posso ativar o compress nas configurações para comprimir tudo em um arquivo.
+mudar a porta que o servidor irá rodar.
+
+posso criar um script para rodar o sistema em desenvolvimento.
+
+npm run dev
