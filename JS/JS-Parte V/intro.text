@@ -1,0 +1,15 @@
+ ** Programação Orientada a Objetos **
+
+-> Fundamentos do POO (Paradigma de programação)
+    .Associação
+    .Encapsulamento
+    .Herança
+    .Polimorfismo
+
+-> Como usar POO no JavaScript
+    .Classes e Instâncias
+    .Construtores
+    .Acessadores
+    .etc
+
+1. Objetos => Funções construtoras usa o PascalCase. O VS Code identifica os objetos e o construtores
