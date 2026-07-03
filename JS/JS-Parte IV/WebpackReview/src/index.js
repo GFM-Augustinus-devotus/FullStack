@@ -1,8 +1,14 @@
 import dayjs from 'dayjs'
 
-console.log("Revisando o Webpack e Babel...")
+console.log('Revisando o Webpack e Babel...')
 
-const mostrarHoje = document.getElementById('dia')
-mostrarHoje.innerText = `Hoje é ${dayjs().format('DD/MM/YYYY')}`
+function mostrarData() {
+  const mostrarHoje = document.getElementById('dia')
+  if (mostrarHoje) {
+    mostrarHoje.innerText = `Hoje é ${dayjs().format('DD/MM/YYYY')} Teste completo usando o Webpackserver`
+  }
+}
 
-//Configurar o Webpack
+window.addEventListener('DOMContentLoaded', () => {
+  window.mostrarData = mostrarData
+})
