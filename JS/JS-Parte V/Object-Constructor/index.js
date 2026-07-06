@@ -10,7 +10,7 @@ function Car(name, brand, year, type, price){
     this.addStock = function addOnStock(quantity){
         this.inStock += quantity
     }
-    this.save = function(){
+    this.save = () => {
         // Save the new object
     }
 }

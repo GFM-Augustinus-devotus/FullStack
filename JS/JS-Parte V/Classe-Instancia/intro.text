@@ -1,0 +1,11 @@
+** Programação Orientada a Objetos**
+
+- Paradigma de programação
+- Foco nos Objetos e como eles se comunicam
+- Dados (Atributos) e Ações (Métodos ou funções)
+- Classe => Fábricas de Objetos "Fôrma"
+- Instâncias => São objetos Fabricados pelas Classes
+
+    Instanciar é o ato de criar uma instância
+
+Obs.: É prática entre os programamdores colocar o nome dos Arquivos com o mesmo nome do Objeto
