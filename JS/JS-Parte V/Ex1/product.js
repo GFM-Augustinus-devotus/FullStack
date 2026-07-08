@@ -20,7 +20,7 @@ console.log(laptop)
 laptop.addToStock(7)
 
 console.log(laptop)
-console.log(laptop.calculateDiscount(15))
+console.log('Valor com 15% de desconto: ' + laptop.calculateDiscount(15))
 
 // Depois de calcular o valor com o disconto eu não altero o valor do produto, pois ele é o valor base da instância.
 // Os valores com desconto mudam de caso para caso.
