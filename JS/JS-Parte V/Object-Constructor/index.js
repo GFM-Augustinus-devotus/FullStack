@@ -16,5 +16,6 @@ function Car(name, brand, year, type, price){
 }
 
 const jetta = new Car("Jetta", "VolksWagen", 2012, "Sedan", 58900.00)
+jetta.addStock(8)
 
 console.log(jetta)
