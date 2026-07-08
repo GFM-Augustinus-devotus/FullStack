@@ -1,0 +1,7 @@
+ ** Associação é um relacionamento entre as classes **
+
+ . Uma instância de uma classe faça outra instância de outra classe realizar uma determinda Associação
+
+ "Um objeto está dependente do outro"
+
+ Por exemplo um atributo da classe Pernson é um objeto da classe Address ou até um array de objetos
