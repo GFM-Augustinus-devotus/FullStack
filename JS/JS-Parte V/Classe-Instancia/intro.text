@@ -9,3 +9,5 @@
     Instanciar é o ato de criar uma instância ou objeto
 
 Obs.: É prática entre os programamdores colocar o nome dos Arquivos com o mesmo nome do Objeto
+
+- Uma coisa a se pensar é como proteger o acesso dos atributos de uma classe. Além disso como delimitar o tipo que será uma variável
