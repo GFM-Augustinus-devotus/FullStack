@@ -1,0 +1,23 @@
+** Encapsulamento **
+
+"É uma forma de proteger uma determinada Classe de alguém acessar os seus atributos e seus métodos"
+
+Portanto Encapsulamento é o princípio de impedir que determinadas partes de uma classe sejam acessíveis pelo 
+contexto exterior.
+
+--> Temos dois casos no JavaScript:
+
+1. Público (Default. Se não determinarmos o padrão de acesso de um atributo ouy método é público)
+2. Privado (Nós utilizamos uma # para indicar que o acesso é privado)
+
+--> Atributo privado Exemplo: Atributo que é definido apenas uma vez durante a sua construção e não pode ser alterado
+posteriormente.
+
+    person.id = f54cdxg6 (Valor único setado em sua construção)
+
+    *******para eu vizualizar o valor desse atributo eu devo criar um método de acesso para ele (get).******
+
+--> Método privado Exemplo: Métdos secundários que fazem parte de um método principal. Assim não pode chamar os 
+métodos secundários de forma independente.
+
+Obs.: Abstração: Simplificar , ou seja, lidar com as coisas principais de uma classe. Comportamento complexo é ocultado
