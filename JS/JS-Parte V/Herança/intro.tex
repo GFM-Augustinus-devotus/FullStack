@@ -1,0 +1,26 @@
+** Herança **
+
+"De forma direta a Herança é uma forma prática de reaproveitar funcionalidades e atributos de determinadas classes
+para outras classes."
+
+- As classes filhas ou subclasses herdam todas as funcionalidades da classe mãe ou superclasse.
+- Além disso as classes filhas possuem seus próprios atributos e métodos que são exclusivos delas.
+- Exemplo:
+
+    SuperClasse User: nome, email e Senha , Login(), ExcludeUser()
+
+    SubClasse UserAdmin: adminKey ,  ConfigPannelAccess()
+    
+    SubClasse UserEditor: CreateNewUser()
+
+    -----> Veja que tanto UserAdmin e UserEditor possuem os atributos e métodos de User mas se diferem nas suas características
+    exclusivas
+
+- Para uma classe herdar outra deve-se utilizar o operador Extends
+- Para colocar mais atributos dentro de uma SubCLasse dever passar em seu construtor a palavra reservada super() que chama o construtor da superclasse
+Podemos usar o super. para acessar as propriedades da classe mãe dentro da classe filha
+- O JS entende que uma instância de UserAdmin é uma instância também de User() 
+
+## Observação ##
+
+Ao programar classes e heranças percebe-se que não faz sentido instanciar objetos da super classe, mas sim apenas das Subcleasses
