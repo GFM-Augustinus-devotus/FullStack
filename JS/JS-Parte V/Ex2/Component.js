@@ -5,18 +5,29 @@ export {Component}
 
 class Component {
     
-    #refElement  = null// Armazena o tipo do Componente. Label, input, br ...
+    #refElement  = null// Armazena o nome genérico do componente criado
 
     constructor(tag, parent, options){ //Options se referem aos atributos do HTML
         this.tag = tag
         this.parent = parent
-        this.options = options //As options de uma Tag são os atributos de um objeto
+        this.options = options
+        this.build()
     }
     build(){ //Método para criar um elemento (Público)
         this.#refElement = document.createElement(this.tag)
+        Object.assign(this.#refElement, this.options)
+        return this
     }
 
     getRefElement(){ // Método para acessar atributo privado
-        return JSON.stringify(this.#refElement)
+        return this.#refElement
+    }
+
+    render(){ // Método para carregar o elemento criado dentro do elemento pai
+        if(this.parent instanceof Component){
+            this.parent.getRefElement().append(this.#refElement)
+        }else{
+            document.querySelector(this.parent).append(this.#refElement)
+        }
     }
 }
