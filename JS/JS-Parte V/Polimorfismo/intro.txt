@@ -1,0 +1,13 @@
+** Polimorfismo **
+
+Ato de um Objeto assumir diferentes formas. No POO é percebido pela Sobrescrista de métodos
+
+No caso a classe filha pode ter suas próprias implementações dos métodos da classe mãe
+
+Diferentes filhas aplicam diferentes funcionanlidades.
+
+Portante ao chamar o método da instância filha vai ser diferente da instância da classe mãe
+
+*Observarção*
+
+Para eu exemplificar o Polimorfismo eu vou usar a Classe Vehicle e suas filhas.
