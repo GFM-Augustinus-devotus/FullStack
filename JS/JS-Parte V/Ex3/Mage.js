@@ -7,10 +7,12 @@ class Mage extends Character {
         this.magica = magica
     }
     toAttack(target){ // No caso do Mage o valor do ataque do mago é somado a sua magia
-        if((this.attack + this.magica) >= target.defense){
-            target.hp -= ((this.attack + this.magica)- target.defense)
+        const targetDefense = this.verifyWarrior(target) ? target.defense + target.shieldPoints : target.defense
+
+        if((this.attack + this.magica) >= targetDefense){
+            target.hp -= ((this.attack + this.magica)- targetDefense)
             return `- *Mage* - 
-            O dano foi de: ${(this.attack + this.magica) - target.defense}` 
+            O dano foi de: ${(this.attack + this.magica) - targetDefense}` 
         }else{
             return `Seu ataue foi bloqueado pela defesa`
         }
