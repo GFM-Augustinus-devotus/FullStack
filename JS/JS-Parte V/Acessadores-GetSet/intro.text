@@ -1,0 +1,11 @@
+Accesadores Get & Set
+
+Get: Modificar a forma em que uma propriedade é LIDA
+Set: Modificar a forma que uma propriedade é ALTERADA via atribuição
+
+Ex.: Uma classe possui uma propriedade que necessita de verificações antes de ter o seu valor modificado
+Ex.: Uma classe possui uma propriedade privada que necessita de um acessador público somente para leitura
+
+Dúvida: Por que utilizar um método get ou set em vez de um método normal
+
+Ao usar um acessador, você pode referenciar diretamente como uma propriedade e manipular como se fosse uma variável

@@ -13,7 +13,7 @@ class Thief extends Character{
             return `- *Thief Attack* - 
             O dano foi de: ${2*(this.attack - targetDefense)}` 
         }else{
-            return `Seu ataue foi bloqueado pela defesa` 
+            return `Seu ataque foi bloqueado pela defesa` 
         }
     }
 }

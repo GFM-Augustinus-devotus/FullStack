@@ -14,7 +14,7 @@ class Mage extends Character {
             return `- *Mage* - 
             O dano foi de: ${(this.attack + this.magica) - targetDefense}` 
         }else{
-            return `Seu ataue foi bloqueado pela defesa`
+            return `Seu ataque foi bloqueado pela defesa`
         }
     }
     toHeal(target){ // No meu caso a cada Heal utilizado o valor da magia cai pela metade e deve ser maior que custo da Magia, no caso do Heal é 10
