@@ -1,0 +1,14 @@
+** Atributos e Métodos Estáticos **
+
+==> Palvra reservada: static
+
+--> São atributos e métodos definidos em uma classe que não dependem de uma instância para serem utilizados
+
+--> São acessados diretamente pela classe ao invés de por uma instância
+
+Ex.: Uma classe precisa definir um atributo global, ou seja, que tenha o mesmo valor para todas as instâncias
+
+Ex.: Classe de modelo para uma tabela no banco de dados onde os métodos devem estar disponíveis mesmo que nenhuma instância
+tenha sido carregada ainda.
+
+--> Pode utilizá-lo junto com os acessadores get e set
