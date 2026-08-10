@@ -8,11 +8,11 @@ class Product{
         this.inStock = inStock
     }
 
-    addInStock(quantity){
+    addToStock(quantity){
         this.inStock += quantity
     }
 
-    reduceInStock(quantity){ //Quantity > inStock Tratamento é feito no pedido
+    removeFromStock(quantity){ //Quantity > inStock Tratamento é feito no pedido
         this.inStock -= quantity
     }
 }
