@@ -1,4 +1,4 @@
-import { Author } from "./entities/Author"
+import { Author } from "./entities/Author.js"
 
 export {DataBase}
 
@@ -93,7 +93,7 @@ class DataBase{
         console.table(this.#storage.authors)
         console.table(this.#storage.books)
         console.table(this.#storage.posters)
-        console.table(this.#storage.users)
+        console.table(this.#storage.users.map(user  => user.data)) //Dados privados então deve fazer um map no getter de user
         console.table(this.#storage.orders.map(order => order.data)) //Dados privados então deve fazer um map no getter de order.
 
     }
