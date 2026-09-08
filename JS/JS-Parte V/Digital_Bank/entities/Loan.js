@@ -1,4 +1,4 @@
-import { Installment } from "./installment"
+import { Installment } from "./Installmentnstallment"
 
 export {Loan}
 
