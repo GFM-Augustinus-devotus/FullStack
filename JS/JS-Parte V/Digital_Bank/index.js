@@ -23,3 +23,5 @@ console.table(App.findUserByEmail("william@gmail.com").account)
 
 console.table(App.findUserByEmail("sabrina@gmail.com"))
 console.table(App.findUserByEmail("sabrina@gmail.com").account)
+
+//Você acessa os objetos criados e não os seus valores em sí

@@ -1,7 +1,7 @@
-import { User } from "./entities/User.js"
 import { Deposit } from "./entities/Deposit.js"
-import { Loan } from "./entities/Loan.js"
 import { Transfer } from "./entities/Transfer.js"
+import { User } from "./entities/user.js"
+import { Loan} from "./entities/loan.js"
 
 export { App }
 
