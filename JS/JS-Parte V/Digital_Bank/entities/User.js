@@ -4,9 +4,9 @@ export { User }
 //Dupla referência Usuário com a conta e a conta com o usuário
 
 class User {
-    constructor(name, email){
-        this.name = name
+    constructor(fullname, email){
+        this.name = fullname
         this.email = email
-        this.account = new Account()
+        this.account = new Account(this)
     }
 }

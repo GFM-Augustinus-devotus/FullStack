@@ -1,4 +1,4 @@
-import { Installment } from "Installment.js"
+import { Installment } from "./Installment.js"
 
 export {Loan}
 
@@ -21,7 +21,7 @@ class Loan { //Todos os usuários irão seguir a mesma taxa de juros para os seu
     constructor(value, installmentQuantity){
         this.value = value,
         this.installment = []
-        for(i = 0; i <= installmentQuantity ; i++){
+        for(let i = 0; i <= installmentQuantity ; i++){
             this.installment.push(new Installment(Number(((this.value*Loan.#interestRate)/installmentQuantity).toFixed(2))), i+1)
         }
         this.createdAt = new Date()
