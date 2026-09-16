@@ -23,7 +23,7 @@ class Loan { //Todos os usuários irão seguir a mesma taxa de juros para os seu
         this.installment = []
         for(let i = 0; i < installmentQuantity ; i++){
             
-            this.installment.push(new Installment(Number(((this.value*Loan.#interestRate)/installmentQuantity).toFixed(2))), i+1)
+            this.installment.push(new Installment(Number(((this.value*Loan.#interestRate)/installmentQuantity).toFixed(2)), i+1))
         }
         this.createdAt = new Date()
     }

@@ -15,13 +15,25 @@ App.changeInterasteRate(10)
 
 App.takeLoan("sabrina@gmail.com", 2000, 24)
 
-console.table(App.findUserByEmail("gabriel@gmail.com"))
-console.table(App.findUserByEmail("gabriel@gmail.com").account)
+console.log(App.findUserByEmail("gabriel@gmail.com"))
+console.log(App.findUserByEmail("gabriel@gmail.com").account)
 
-console.table(App.findUserByEmail("william@gmail.com"))
-console.table(App.findUserByEmail("william@gmail.com").account)
+console.log(App.findUserByEmail("william@gmail.com"))
+console.log(App.findUserByEmail("william@gmail.com").account)
 
-console.table(App.findUserByEmail("sabrina@gmail.com"))
-console.table(App.findUserByEmail("sabrina@gmail.com").account)
+console.log(App.findUserByEmail("sabrina@gmail.com"))
+console.log(App.findUserByEmail("sabrina@gmail.com").account)
 
-//Você acessa os objetos criados e não os seus valores em sí
+//Vendo todos os usersde forma direta
+
+console.log(App.users)
+
+//Vamos ver todos os depositos de um usuário sem usar o findUserByEmail
+
+console.log(App.users[0].account.deposits)
+
+// Vendo os installments do Loan de um usuário utilizando o findUserByEmail
+
+console.table(App.findUserByEmail("sabrina@gmail.com").account.loans[0].installment)
+
+//// ***** Atenção, parece que a quantidade de parcelas estão vindo de forma dobradas

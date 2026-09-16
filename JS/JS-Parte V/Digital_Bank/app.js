@@ -54,4 +54,8 @@ class App {
     static changeInterasteRate(newPercentage){ //Como o atributo é privado você só pode modificá-lo com o Set
         Loan.interestRate = newPercentage
     }
+
+    static get users(){
+        return App.#users
+    }
 }
